@@ -2,18 +2,17 @@
 
 
 
-
 .fade-out-section {
-    opacity: 1;
+    opacity:1;
     visibility:visible;
     transition: opacity 90ms ease-out, visibility 90ms ease-out;
     will-change:opacity,visibility; 
 }
 
 
-.fade-out-section.is-hidden {
+.fade-out-section.is-visible {
     opacity: 0;
-    visibility: visible;
+    visibility: hidden;
 }
 
 
@@ -21,26 +20,15 @@
 .fade-in-section {
     opacity: 0;
     visibility:hidden;
-    transition: opacity 90ms ease-out, visibility 90ms ease-out;
+    transition: opacity 90ms ease-in, visibility 90ms ease-in;
     will-change:opacity,visibility; 
 }
 
 
-.fade-in-section.is-Hidden {
-    opacity: 0;
-    visibility: hidden;
+.fade-in-section.is-hidden {
+    opacity: 1;
+    visibility: visible;
 }
-
-
-.fade-in-section.is-visible {
-    opacity: 0;
-    visibility: hidden;
-}
-
-
-
-
-
 
 
 
