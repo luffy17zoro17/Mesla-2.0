@@ -1,12 +1,10 @@
-import Image from 'next/image'
 import React from 'react'
-
 import Navbar from '../components/Navbar';
 import SpeedIcon from '@mui/icons-material/Speed';
+import Image from 'next/image';
 
 
-const modelx = () => {
-
+const solarroof = () => {
   return (
     <div>
        <div><Navbar/></div>
@@ -17,7 +15,7 @@ const modelx = () => {
         
          <div className="absolute w-[100%] z-10 border font-semibold text-6xl
           text-white mt-[7%]">
-             Model X
+             Solar Roof
          </div>     
          <div className="absolute z-10 flex flex-col justify-end 
           items-center text-white top-[20%] h-[80%] w-[100%] border-4">
@@ -51,7 +49,7 @@ const modelx = () => {
          </div> 
          <div className="">
           <Image
-              src="https://images.unsplash.com/photo-1563720360263-0dafca427881?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+              src="https://images.unsplash.com/photo-1623696613585-7319e61a5659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2067&q=80"
               layout="fill"
               alt=""
               className="object-cover"
@@ -63,4 +61,6 @@ const modelx = () => {
   )
 }
 
-export default modelx
+export default solarroof
+
+

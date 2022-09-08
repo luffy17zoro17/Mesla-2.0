@@ -9,6 +9,9 @@ import Link from "next/link";
 
 
 
+
+
+
 const images = [
 
   {
@@ -18,7 +21,8 @@ const images = [
     detail:"Order Online for Touchless Delivery",
     buttonL:'CUSTOM ORDER',
     buttonR:'EXISTING INVENTORY',
-    imgPath:`https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80`
+    imgPath:`https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80`,
+    footer:''
   },
   {
     id:2,
@@ -27,7 +31,8 @@ const images = [
     detail:"Order Online for Touchless Delivery",
     buttonL:'CUSTOM ORDER',
     buttonR: 'EXISTING INVENTORY',
-    imgPath: `https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`
+    imgPath: `https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`,
+    footer:''
   },
   {
     id:3,
@@ -36,7 +41,8 @@ const images = [
     detail:"Order Online for Touchless Delivery",
     buttonL:'CUSTOM ORDER',
     buttonR:'EXISTING INVENTORY',
-    imgPath: `https://images.unsplash.com/photo-1542282088-fe8426682b8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80`
+    imgPath: `https://images.unsplash.com/photo-1558992658-08a063bb01af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`,
+    footer:''
   },  
   {
     id:4,
@@ -45,7 +51,8 @@ const images = [
     detail:"Order Online for Touchless Delivery",
     buttonL:'CUSTOM ORDER',
     buttonR:'EXISTING INVENTORY',
-    imgPath:`https://images.unsplash.com/photo-1633507104426-f2be1293f5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1906&q=80`
+    imgPath:`https://images.unsplash.com/photo-1633507104426-f2be1293f5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1906&q=80`,
+    footer:''
   },
   {
     id:5,
@@ -54,7 +61,8 @@ const images = [
     detail:"Lowest Cost Solar Panels in America",
     buttonL:'ORDER NOW',
     buttonR:'LEARN MORE',
-    imgPath:`https://images.unsplash.com/flagged/photo-1566838616631-f2618f74a6a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80`
+    imgPath:`https://images.unsplash.com/flagged/photo-1566838616631-f2618f74a6a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80`,
+    footer:''
   },
   {
     id:6,
@@ -63,7 +71,8 @@ const images = [
     detail:'Produce Clean Energy From Your Roof',
     buttonL:'ORDER NOW',
     buttonR:'LEARN MORE',
-    imgPath:`https://images.unsplash.com/photo-1637417494521-78b4d1d33029?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`
+    imgPath:`https://images.unsplash.com/photo-1637417494521-78b4d1d33029?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`,
+    footer:''
   },
   {
     id:7,
@@ -72,7 +81,8 @@ const images = [
     detail:'',
     buttonL:'SHOP NOW',
     buttonR:'',
-    imgPath:`https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80`
+    imgPath:`https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80`,
+    footer:'Mesla © 2022 Privacy & Legal Vehicle Recalls Contact Careers News'
 
   }
  
@@ -90,7 +100,7 @@ function FadeInSection(props){
   }, []);
   return (
     <div
-      className={`fade-out-section ${isVisible ? "is-hidden": `fade-in-section ${isVisible ? "is-visible" : ""}`}`}
+      className={`fade-in-section ${isVisible ? "is-hidden": ""}`}
       ref={domRef}
     >
       {props.children}
@@ -102,7 +112,6 @@ function FadeInSection(props){
 
 export default function Home() {
 
-  
 
   return (
    <>
@@ -116,66 +125,81 @@ export default function Home() {
         
    <div className="border-4 sticky top-0 left-0">
      <div><NavbarTop/></div>
-     <div className="absolute w-[100%] py-11"><Navbar/></div>
+     <div className="absolute w-[100%] py-11"><Navbar name={images.name}/></div>
    </div> 
    <div className="">      
-      {images.map((image)=>(
-       <div key={image.id} className="relative h-screen border-4
+      {images.map(({id,name,detail,imgPath,buttonL,buttonR,type,footer})=>(
+       <div key={id} className="relative h-screen border-4
         border-blue-600 z-[-100]">
-          <div className="">
+          
+          <div className="min-h-[100%] min-w-[100%]">
             <div className="">
             <Image
-                src={image.imgPath}
+                src={imgPath}
                 layout="fill"
                 className="object-cover"
                 alt=""
+                priority
             />    
             </div>  
+
             <FadeInSection> 
-            <div className="border-4 border-blue-300 absolute 
+            <div className="border-4 border-blue-300 absolute
               min-h-[98%] min-w-[100%] flex flex-col items-center
                justify-center"> 
                                       
                 <div className="absolute border-4 flex flex-col items-center 
                  justify-between border-red-500 text-center min-w-[90%] min-h-[96%]"> 
                       <div className="border py-[8%]">
-                        <div className={`${image.type === "solar" ? "font-semibold text-4xl text-gray-600 tracking-[0.05rem]"
+                        <div className={`${type === "solar" ? "font-semibold text-4xl text-gray-600 tracking-[0.05rem]"
                         : "font-semibold text-4xl tracking-[0.05rem] text-white"}`}>
-                          {image.name}
+                          {name}
                         </div>                   
-                        <div className={`${image.type === "solar" ? "font-medium text-gray-600" : "font-medium text-white"} 
-                        ${image.type === "car" ? "underline" : ""}`}>
-                          {image.detail}
+                        <div className={`${type === "solar" ? "font-medium text-gray-600" : "font-medium text-white"} 
+                        ${type === "car" ? "underline" : ""}`}>
+                          {detail}
                         </div>  
                       </div>
                                         
                         
                       <div className="text-center w-[98%]">
-                          <div className={`${image.id===1 ? "border sm:flex sm:justify-center sm:gap-5" :
+                          <div className={`${id===1 ? "border sm:flex sm:justify-center sm:gap-5" :
                            "border sm:flex sm:justify-center sm:gap-5 pb-[11%]"}`}>      
                             <div className="opacity-[0.9] text-white bg-gray-700 border 
                               rounded-3xl flex py-[0.6rem] text-[13px] justify-center
                               font-bold mb-2 sm:w-[13rem] sm:mb-0 md:w-[17rem]">
-                                {image.buttonL}
+                                {buttonL}
                             </div>             
-                            <div className={image.id === 7 ? "hidden" : `text-[13px] font-bold 
+                            <div className={id === 7 ? "hidden" : `text-[13px] font-bold 
                               opacity-[0.8] bg-gray-300 rounded-3xl flex justify-center 
                               py-[0.6rem] sm:w-[13rem] md:w-[17rem]`}>
-                                {image.buttonR}
+                                {buttonR}
                             </div>                       
                           </div> 
-                          <div className={image.id === 1 ? "border" : "hidden"}>   
+                          <div className={id === 1 ? "border" : "hidden"}>   
                                 <KeyboardArrowDownIcon 
                                   className="mt-[5%] text-4xl"
                                 />  
                           </div> 
                       </div>  
-                </div>      
-            
+                </div>
+           
+                <div className={id===7 ? `bottom-[0%] top-[94%] bg-white text-sm 
+                   font-semibold flex min-w-[102%]
+                   justify-center flex-col border-2 absolute z-20 text-center 
+                   tracking-wide md:sticky md:min-w-[100%]`
+                    : "hidden"}>   
+                   <div className="border min-w-screen bg-white md:flex justify-center">
+                     {footer} <h1 className="hidden sm:flex justify-center">
+                       &nbsp;Engage Locations
+                      </h1>
+                   </div>
+                </div>
+                    
             </div>
-
+            
             </FadeInSection> 
-          </div>
+          </div>     
        </div>     
       ))}
    </div>
@@ -184,3 +208,5 @@ export default function Home() {
     
   );
 }
+
+

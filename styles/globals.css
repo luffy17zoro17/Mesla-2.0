@@ -31,7 +31,11 @@
 }
 
 
-
+.fade-in-section.is-opaque {
+    opacity: 1;
+    visibility: visible;
+    will-change:'';
+}
 
 
 

@@ -1,23 +1,19 @@
 import Image from 'next/image'
 import React from 'react'
-
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar'
 import SpeedIcon from '@mui/icons-material/Speed';
 
-
-const modelx = () => {
-
+const solarpanels = () => {
   return (
     <div>
        <div><Navbar/></div>
-       
-       
+      
        <div className="absolute flex flex-col text-center justify-between min-w-[100%] 
          min-h-[100%]">
         
          <div className="absolute w-[100%] z-10 border font-semibold text-6xl
           text-white mt-[7%]">
-             Model X
+             Solar Panels
          </div>     
          <div className="absolute z-10 flex flex-col justify-end 
           items-center text-white top-[20%] h-[80%] w-[100%] border-4">
@@ -51,7 +47,7 @@ const modelx = () => {
          </div> 
          <div className="">
           <Image
-              src="https://images.unsplash.com/photo-1563720360263-0dafca427881?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+              src="https://images.unsplash.com/photo-1623005399662-b55f006328c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1864&q=80"
               layout="fill"
               alt=""
               className="object-cover"
@@ -63,4 +59,7 @@ const modelx = () => {
   )
 }
 
-export default modelx
+export default solarpanels
+
+
+

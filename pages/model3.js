@@ -1,12 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
-
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar'
 import SpeedIcon from '@mui/icons-material/Speed';
 
 
-const modelx = () => {
 
+const model3 = () => {
   return (
     <div>
        <div><Navbar/></div>
@@ -17,7 +16,7 @@ const modelx = () => {
         
          <div className="absolute w-[100%] z-10 border font-semibold text-6xl
           text-white mt-[7%]">
-             Model X
+             Model 3
          </div>     
          <div className="absolute z-10 flex flex-col justify-end 
           items-center text-white top-[20%] h-[80%] w-[100%] border-4">
@@ -51,7 +50,7 @@ const modelx = () => {
          </div> 
          <div className="">
           <Image
-              src="https://images.unsplash.com/photo-1563720360263-0dafca427881?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+              src="https://images.unsplash.com/photo-1619572945516-7598cb601a11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80"
               layout="fill"
               alt=""
               className="object-cover"
@@ -63,4 +62,10 @@ const modelx = () => {
   )
 }
 
-export default modelx
+export default model3
+
+
+// https://images.unsplash.com/photo-1619572945516-7598cb601a11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80
+
+
+// "https://images.unsplash.com/photo-1642569135400-9e09b38dc200?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80
