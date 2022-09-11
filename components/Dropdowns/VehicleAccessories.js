@@ -60,10 +60,10 @@ const Accessories = [
 
 const VehicleAccessories = () => {
   return (
-   <div className="fixed bg-black h-[30rem] w-[50rem] z-30 flex 
-   justify-start border-4 border-blue-300">
-    <div className="absolute z-10 text-white ml-[5rem]
-      flex justify-evenly h-[28rem] w-[100%]">
+ 
+   
+    <div className="fixed bg-gray-800 text-white
+      flex justify-evenly w-[100%] ml-[5.1rem] py-[5%] h-[26rem]">
        {AccessoryTypes.map((access)=>(
          
           <div className="" key={access.id}>
@@ -80,7 +80,8 @@ const VehicleAccessories = () => {
           </div>
        ))}
     </div>
-   </div>
+   
+   
   )
 }
 

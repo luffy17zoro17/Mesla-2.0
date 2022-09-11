@@ -1,6 +1,9 @@
 
+import React,{forwardRef} from "react";
+import ClickOutside from "../../components/Searchbar/ClickOutside";
+
 import Shopbar from '../../components/Shopbar';
-import * as React from 'react';
+
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
@@ -40,8 +43,7 @@ const products = [
 
 
 
-function SwipeableTextMobileStepper(){
-
+const SwipeableTextMobileStepper=()=>{
 
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -66,10 +68,10 @@ function SwipeableTextMobileStepper(){
    <>
     <div className="bg-black"><Shopbar/></div>
      
-    <Box className="border-4 border-yellow-500 relative min-h-screen min-w-[100%]">
+    <Box className="border-0 border-yellow-500 relative min-h-screen min-w-[100%]">
 
        <AutoPlaySwipeableViews
-        className="border-4 border-orange-800 absolute
+        className="border-0 border-orange-800 absolute
          min-h-[100%] min-w-[100%]"
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}

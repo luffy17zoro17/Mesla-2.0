@@ -125,7 +125,9 @@ export default function Home() {
         
    <div className="border-4 sticky top-0 left-0">
      <div><NavbarTop/></div>
-     <div className="absolute w-[100%] py-11"><Navbar name={images.name}/></div>
+     <div className="absolute w-[100%] py-11">
+      <Navbar/>
+    </div>
    </div> 
    <div className="">      
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type,footer})=>(
