@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Link from 'next/link';
-import Menu from './RightSlideBar/Menu';
-import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
-import BgBlur from './BgBlur';
+
+
 
 
 
@@ -10,18 +9,11 @@ import BgBlur from './BgBlur';
 
 const Navbar= () => {
 
-  const [isVisible,setIsVisible] = useState(false);
-
-
-  const handleToggle = () => {
-
-     setIsVisible(!isVisible);
-  }
   
 
   return (
-    <div className="text-white flex max-w-screen border-pink-300
-      w-[100%] absolute z-10 border-4 h-[3.5rem]">
+    <div className="text-white flex max-w-screen
+      w-[100%] h-[3.5rem]">
        <ul className="flex items-center justify-around
         w-[100%] gap-[50%]"> 
         
@@ -66,33 +58,19 @@ const Navbar= () => {
            </li>    
          </ul>
         
-         <ul className="flex justify-end pr-1 font-semibold w-[18%]">
-            <li className="px-4 pb-1 cursor-pointer hover:bg-gray-400 rounded-lg hidden xl:flex">
-              <Link href="/right/shop" as="/right/shop" rel="stylesheet preload prefetch"><a>Shop</a></Link></li>
-            <li className="px-4 pb-1 cursor-pointer hover:bg-gray-400 rounded-lg hidden xl:flex">
-              <Link href="/right/account"><a>Account</a></Link>
+         <ul className="flex justify-end ml-[11rem] font-semibold w-[18%]">
+            <li className="px-4 pb-1 cursor-pointer
+             hover:bg-gray-400 rounded-lg hidden xl:flex">
+              <Link href="/right/shop" as="/right/shop"
+               rel="stylesheet preload prefetch">
+                <a>Shop</a>
+              </Link>
             </li>
-            <div>
-              <button onClick={handleToggle} className="px-4 pb-1 bg-gray-400 opacity-[0.9rem] rounded-lg hover:bg-gray-500 
-              cursor-pointer xl:bg-transparent">
-                Menu
-              </button>
-              {isVisible ?
-              (<div>
-                <div className="">
-                  <Menu/>
-                  <div className="absolute left-0 top-0 
-                   w-[100%]">
-                    <BgBlur/>
-                  </div>
-                </div>
-                <button onClick={handleToggle}>
-                   <CancelPresentationIcon 
-                     className="fixed top-7 right-7 z-10 p-[0.2rem]
-                    hover:bg-gray-600 rounded scale-[1.5]"/>
-                </button>
-               </div>) : (<div></div>)}
-            </div>
+            <li className="px-4 pb-1 mr-[7rem] cursor-pointer
+             hover:bg-gray-400 rounded-lg hidden xl:flex">
+              <Link href="/signin"><a>Account</a></Link>
+            </li>
+            
                
          </ul>   
         

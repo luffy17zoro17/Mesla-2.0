@@ -68,11 +68,16 @@ const VehicleAccessories = () => {
          
           <div className="" key={access.id}>
             <ul className="">
-             <li className="font-semibold text-lg pb-[3%]">{access.type}</li>  
-             <li className="pb-[14%]"><hr className="bg-gray-400 w-[15rem] h-[0.3rem]"/></li>
+             <li className="font-semibold text-lg pb-[3%]">
+              {access.type}
+             </li>  
+             <li className="pb-[14%]"><hr className="bg-gray-400 w-[15rem]
+              h-[0.3rem]"/></li>
              <li>{Accessories.map((accessory)=>(
                <div key={accessory.id}>
-                  <div>{accessory.name}</div>
+                  <div className="">
+                    {accessory.name}
+                  </div>
                </div>
               ))}
              </li>               

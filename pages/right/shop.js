@@ -67,20 +67,18 @@ const SwipeableTextMobileStepper=()=>{
   return (
    <>
     <div className="bg-black"><Shopbar/></div>
-     
-    <Box className="border-0 border-yellow-500 relative min-h-screen min-w-[100%]">
+    <Box className="absolute h-[100%] min-w-[100%]">
 
        <AutoPlaySwipeableViews
-        className="border-0 border-orange-800 absolute
-         min-h-[100%] min-w-[100%]"
+        className="absolute h-[100%]
+         min-w-[100%]"
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
        >
         {products.map((product, index) => (
-          <div key={product.id} className="border-4
-           border-green-500 absolute min-h-screen min-w-[100%]">
+          <div key={product.id} className="absolute min-h-screen min-w-[100%]">
             {Math.abs(activeStep - index) <= 2 ? (
             <div className=""> 
               <Image
@@ -91,9 +89,9 @@ const SwipeableTextMobileStepper=()=>{
                 alt=""
               />
              
-              <div className="absolute w-[100%] h-[98%] border-4 
+              <div className="absolute w-[100%] h-[98%]
                flex flex-col items-center justify-center">
-                <div className="font-bold h-[70%] space-y-4 text-white border-4
+                <div className="font-bold h-[70%] space-y-4 text-white
                  text-center flex flex-col items-center justify-end">  
                   <h1 className="text-5xl">{product.item}</h1>
                   <h2 className="text-2xl">{product.detail}</h2>
@@ -114,7 +112,7 @@ const SwipeableTextMobileStepper=()=>{
        </AutoPlaySwipeableViews>
     
        <MobileStepper
-            className="flex justify-center bg-transparent border-2 w-[100%] py-[2%]"
+            className="z-1 flex justify-center bg-transparent w-[100%] py-[2%]"
             steps={maxSteps}
             variant="dots"
             activeStep={activeStep}

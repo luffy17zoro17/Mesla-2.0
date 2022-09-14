@@ -1,16 +1,19 @@
 import React from 'react';
-import {forwardRef} from "react";
+
 import Link from 'next/link';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 
 import {useState} from 'react';
 import VehicleAccessories from "./Dropdowns/VehicleAccessories"
 import Apparel from './Dropdowns/Apparel';
-import { Button } from '@mui/material';
+
 import Charging from './Dropdowns/Charging';
 import Lifestyle from './Dropdowns/Lifestyle';
-import { useRef } from 'react';
+
 import SearchBar from './Searchbar/SearchBar';
+import BgBlur from './BgBlur';
+import InnerMenu from './RightSlideBar/InnerMenu';
 
 
 
@@ -18,14 +21,20 @@ import SearchBar from './Searchbar/SearchBar';
 
 const Shopbar= () => {
 
-  const [isSearchable, setIsSearchable] = useState(false);
-  const [isSearchableHidden, setIsSearchableHidden] = useState(false);
- 
+  const [isVisible, setIsVisible] = useState(false);
+
+
+  const handleToggle = () => {
+
+    setIsVisible(!isVisible);
+     
+  }
   
+
 
   return (
     <div className="text-white flex max-w-screen border-pink-300
-      w-[100%] absolute z-10 border-4 h-[3.5rem] hover:bg-gray-800">
+      w-[100%] absolute z-10 h-[3.5rem] hover:bg-gray-800">
        <ul className="flex items-center justify-around
         w-[100%] gap-[50%]"> 
         
@@ -91,16 +100,34 @@ const Shopbar= () => {
            </div>
          </ul>
         
-         <ul className="flex items-center justify-end pr-1 gap-[0.7rem] font-semibold w-[18%]">
+         <ul className="flex items-center justify-end pr-1 gap-[0.7rem] font-semibold 
+         w-[18%]">
           
-            <li className="pb-1 border-0 hover:cursor-pointer focus:border-2
+            <li className="pb-1 hover:cursor-pointer focus:border-2
              focus:border-white">
                <div className="z-10"><SearchBar/></div>
               <Link href="/cart"><ShoppingCartIcon/></Link>
             </li>
             <li className="px-4 pb-1 bg-gray-400 opacity-[0.9rem] rounded-lg 
             hover:bg-gray-500 cursor-pointer xl:bg-transparent">
-              <Link href="/right/menu"><a>Menu</a></Link>
+              <button onClick={handleToggle}>
+                Menu
+              </button>
+              {isVisible ?
+              (<div>
+                <div className="">
+                  <InnerMenu/>
+                  <div className="absolute left-0 top-0 
+                   w-[100%]">
+                    <BgBlur/>
+                  </div>
+                </div>
+                <button onClick={handleToggle}>
+                   <CancelPresentationIcon 
+                     className="fixed top-7 right-7 z-10 p-[0.2rem]
+                    hover:bg-gray-600 rounded scale-[1.5]"/>
+                </button>
+               </div>) : (<div></div>)}
             </li>
          </ul>   
         

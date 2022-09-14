@@ -34,7 +34,9 @@ const Charging = () => {
          
           <div className="" key={typart.id}>
             <ul className="">
-             <li className="font-semibold text-lg pb-[3%]">{typart.name}</li>  
+             <li className="font-semibold text-lg pb-[3%]">
+              {typart.name}
+             </li>  
              <li className="pb-[14%]"><hr className="bg-gray-400 w-[15rem] h-[0.3rem]"/>
              
              </li>               

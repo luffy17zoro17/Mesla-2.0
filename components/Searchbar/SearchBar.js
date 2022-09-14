@@ -8,16 +8,16 @@ import ClickOutside from './ClickOutside';
 
 const SearchBar = forwardRef(({open,setOpen}, ref) => {
   return (
-    <div className="fixed -top-3 right-[9rem]">
+    <div className="fixed -top-3 right-[9rem] hidden lg:flex">
         <div ref={ref}>
            <button className="" onClick={() => setOpen(!open)}>
-              <SearchIcon className="absolute right-3 mt-2 ml-[2rem]"/>
+              <SearchIcon className="absolute text-white right-3 
+              mt-2 ml-[2rem] z-70"/>
            </button>
            {open && (
-              <div>
+              <div className="">
                 <input 
-                  className="relative rounded-sm h-8 pb-1 pl-2 border-[0.1rem] z-10 
-                        bg-transparent" 
+                  className="bg-transparent rounded-sm h-8 pb-1 pl-2 border-[0.1rem]" 
                   placeholder="Search"
                 /> 
               </div>

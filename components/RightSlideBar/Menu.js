@@ -1,43 +1,53 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PublicTwoToneIcon from '@mui/icons-material/PublicTwoTone';
-import PublicTwoTone from '@mui/icons-material/PublicTwoTone';
+import Link from "next/link";
 
 
 
 const menuItems = [
-   
-      {id:1, name:"Existing Inventory"},
-      {id:2,name:"Used Inventory"},
-      {id:3,name:"Trade-In"},
-      {id:4,name:"Test Drive"},
-      {id:5,name:"Insurance"},
-      {id:6,name:"Cybertruck"},
-      {id:7,name:"Roadster"},
-      {id:8,name:"Semi"},
-      {id:9,name:"Charging"},
-      {id:10,name:"Powerwall"},
-      {id:11,name:"Commercial Energy"},
-      {id:12,name:"Utilities"},
-      {id:13,name:"Find Us"},
-      {id:14,name:"Support"},
-      {id:15,name:"Investor Relations"},
+      {id:1,name:"Model S",link:"/models"},
+      {id:2,name:"Model 3",link:"/model3"},
+      {id:3,name:"Model X",link:"/modelx"},
+      {id:4,name:"Model Y",link:"/modely"},
+      {id:5,name:"Solar Roof",link:"/solarroof"},
+      {id:6,name:"Solar Panels",link:"/solarpanels"},
+      {id:7, name:"Existing Inventory",link:""},
+      {id:8,name:"Used Inventory",link:""},
+      {id:9,name:"Trade-In",link:""},
+      {id:10,name:"Test Drive",link:""},
+      {id:11,name:"Insurance",link:""},
+      {id:12,name:"Cybertruck",link:""},
+      {id:13,name:"Roadster",link:""},
+      {id:14,name:"Semi",link:""},
+      {id:15,name:"Charging",link:""},
+      {id:16,name:"Powerwall",link:""},
+      {id:17,name:"Commercial Energy",link:""},
+      {id:18,name:"Utilities",link:""},
+      {id:19,name:"Find Us",link:""},
+      {id:20,name:"Support",link:""},
+      {id:21,name:"Investor Relations",link:""},
 ]
 
 
 const Menu = () => {
 
-  
 
   return (
-    <div className="fixed z-10 h-[47.6rem] flex flex-col justify-center 
-       items-center top-0 right-0 bg-black border w-[20rem] pt-14">
-      <div className=" space-y-[0.7rem]">
+   
+    <div className="text-white flex flex-col justify-center 
+       items-center top-[-3.3rem] right-0 bg-black font-semibold
+        w-[20rem] pt-[6rem]">
+      <div className="right-5 
+      w-[17rem] top-0 bg-black fixed
+      h-[7rem]">
+      </div>    
+      <div className="space-y-[1rem] pt-[1rem] lg:pt-[0rem]">
       {menuItems.map((items)=>
         <div key={items.id}>
          <div className="w-[16rem]"> 
-          <h1 className="hover:bg-gray-700 cursor-pointer 
-           rounded pb-1 pl-5">
-            {items.name}
+          <h1 className={`pl-5 pb-1 hover:bg-gray-700 cursor-pointer 
+           rounded h-7 ${items.id>0 && items.id<7 ? "lg:hidden" : "flex"}`}>
+            <Link className="" href={items.link}><a>{items.name}</a></Link>
           </h1>
          </div> 
         </div>
@@ -56,7 +66,8 @@ const Menu = () => {
       </span>
       
     </div>
-  )
+  
+  );
 }
 
 export default Menu

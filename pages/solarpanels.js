@@ -1,7 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
 import Navbar from '../components/Navbar'
-import SpeedIcon from '@mui/icons-material/Speed';
+import SolarPowerIcon from '@mui/icons-material/SolarPower';
+
+
+
 
 const solarpanels = () => {
   return (
@@ -11,33 +14,41 @@ const solarpanels = () => {
        <div className="absolute flex flex-col text-center justify-between min-w-[100%] 
          min-h-[100%]">
         
-         <div className="absolute w-[100%] z-10 border font-semibold text-6xl
-          text-white mt-[7%]">
-             Solar Panels
+         <div className="absolute w-[100%] z-10 border font-semibold text-4xl sm:text-5xl md:text-6xl
+          text-white mt-[5rem] bg-white pb-1 text-black opacity-75">
+             Solar for Existing Roofs
+            <h1 className="tracking-wider pt-4 text-[1.02rem]">
+              Lowest Cost Solar Panels in America—Money-back guarantee
+            </h1> 
          </div>     
-         <div className="absolute z-10 flex flex-col justify-end 
-          items-center text-white top-[20%] h-[80%] w-[100%] border-4">
+         <div className="absolute z-10 flex flex-col
+            items-center text-white bottom-0 h-50
+            py-9 w-[100%] rounded-tl-xl rounded-br-xl bg-black 
+            opacity-75">
 
           <div className="flex flex-col min-w-[80%] h-[20%] mb-[2rem]
            justify-end md:flex-row md:justify-center lg:min-w-[50rem]">
     
             <div className="flex justify-evenly text-xl font-semibold sm:text-3xl
-             md:space-x-[1rem] min-w-[70%]">
+             md:space-x-[1rem] min-w-[70%]"> 
                <span>
-                  <SpeedIcon className="scale-[60%] sm:scale-[110%] 
-                   sm:mr-1 sm:mb-2" fontSize="large"/>3.1s <br/>
-                  <h1 className="text-xs">0-60 mph*</h1>
+                  <SolarPowerIcon className=""/><br/>
+                  <h1 className="text-xs pt-[0.5rem]">Convert Sunlight<br/>
+                   to Energy</h1>
                </span>
-               <span>358mi <br/>
-                <h1 className="text-xs pt-[0.5rem]">Range (EPA est.)</h1>
+               <span>₹<br/>
+                <h1 className="text-xs pt-[0.5rem]">Guaranteed Lowest<br/>
+                 Price for Solar</h1>
                </span>
-               <span>AWD<br/>
-                <h1 className="text-xs pt-[0.5rem]">Dual Motor</h1>  
+               <span>24/7<br/>
+                <h1 className="text-xs pt-[0.5rem]">Energy <br/> 
+                Monitoring</h1>  
                </span>
             </div>  
             <div className="flex justify-center">
               <h1 className="border-[0.16rem] pt-1 pb-2 mt-7 rounded font-semibold
-               w-[22rem] sm:w-[24rem] md:w-[16rem] h-[2.8rem] md:mt-0">
+               w-[22rem] sm:w-[24rem] md:w-[16rem] h-[2.8rem] md:mt-0 hover:bg-white
+                hover:text-black hover:border-black">
                 Order Now
               </h1>
             </div>  

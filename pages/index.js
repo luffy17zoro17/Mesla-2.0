@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import NavbarTop from '../components/NavbarTop';
 import Link from "next/link";
+import Menu from "../components/RightSlideBar/Menu";
+import BgBlur from "../components/BgBlur";
 
-
+import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 
 
 
@@ -22,7 +24,7 @@ const images = [
     buttonL:'CUSTOM ORDER',
     buttonR:'EXISTING INVENTORY',
     imgPath:`https://images.unsplash.com/photo-1626668893632-6f3a4466d22f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80`,
-    footer:''
+  
   },
   {
     id:2,
@@ -32,7 +34,7 @@ const images = [
     buttonL:'CUSTOM ORDER',
     buttonR: 'EXISTING INVENTORY',
     imgPath: `https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`,
-    footer:''
+  
   },
   {
     id:3,
@@ -42,7 +44,7 @@ const images = [
     buttonL:'CUSTOM ORDER',
     buttonR:'EXISTING INVENTORY',
     imgPath: `https://images.unsplash.com/photo-1558992658-08a063bb01af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`,
-    footer:''
+    
   },  
   {
     id:4,
@@ -52,7 +54,6 @@ const images = [
     buttonL:'CUSTOM ORDER',
     buttonR:'EXISTING INVENTORY',
     imgPath:`https://images.unsplash.com/photo-1633507104426-f2be1293f5a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1906&q=80`,
-    footer:''
   },
   {
     id:5,
@@ -72,7 +73,7 @@ const images = [
     buttonL:'ORDER NOW',
     buttonR:'LEARN MORE',
     imgPath:`https://images.unsplash.com/photo-1637417494521-78b4d1d33029?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`,
-    footer:''
+    
   },
   {
     id:7,
@@ -82,11 +83,14 @@ const images = [
     buttonL:'SHOP NOW',
     buttonR:'',
     imgPath:`https://images.unsplash.com/photo-1593941707882-a5bba14938c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80`,
-    footer:'Mesla © 2022 Privacy & Legal Vehicle Recalls Contact Careers News'
+    
 
   }
  
 ]
+
+
+
 
 function FadeInSection(props){
 
@@ -110,7 +114,16 @@ function FadeInSection(props){
 
 
 
+
 export default function Home() {
+
+  const [isVisible,setIsVisible] = useState(false);
+
+
+  const handleToggle = () => {
+
+     setIsVisible(!isVisible);
+  }
 
 
   return (
@@ -121,18 +134,47 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
     </Head>
     
-   <section>
+   <section className={`${isVisible ? "fixed w-[100%]" : ""}`}>
         
-   <div className="border-4 sticky top-0 left-0">
-     <div><NavbarTop/></div>
-     <div className="absolute w-[100%] py-11">
+    <div className="sticky top-0 left-0">
+     <div className="absolute z-10 w-[100%]"><NavbarTop/></div>
+     <div className="absolute h-[48rem] w-[100%] py-11">
       <Navbar/>
+    </div>
+    <div>
+    <div className="">
+              <button onClick={handleToggle} className={`overflow-y-hidden px-4 pb-1 
+              bg-gray-400 opacity-[0.9rem] rounded-lg hover:bg-gray-500 
+              cursor-pointer absolute z-0 right-7 top-[2.9rem] 
+              m-3 xl:bg-transparent xl:text-white`}>
+                Menu
+              </button>
+              {isVisible ?
+              (<div className="">
+                <div className="">
+                <div className="fixed left-0 top-0 
+                   w-[100%]">
+                    <BgBlur/>
+                  </div>
+                  <div className={`${isVisible && `overflow-visible 
+                  overflow-x-hidden overflow-y-auto
+                  absolute h-[100%] min-h-screen z-10 right-0 top-0`}`}>
+                   <Menu/>
+                  </div>
+                  
+                </div>
+                <button onClick={handleToggle}>
+                   <CancelPresentationIcon 
+                     className="absolute text-white z-10 top-7 right-11 p-[0.2rem]
+                    hover:bg-gray-600 rounded scale-[1.5]"/>
+                </button>
+               </div>) : (<div></div>)}
+    </div>
     </div>
    </div> 
    <div className="">      
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type,footer})=>(
-       <div key={id} className="relative h-screen border-4
-        border-blue-600 z-[-100]">
+       <div key={id} className="relative h-screen z-[-100]">
           
           <div className="min-h-[100%] min-w-[100%]">
             <div className="">
@@ -141,32 +183,33 @@ export default function Home() {
                 layout="fill"
                 className="object-cover"
                 alt=""
-                priority
+
             />    
             </div>  
-
-            <FadeInSection> 
-            <div className="border-4 border-blue-300 absolute
-              min-h-[98%] min-w-[100%] flex flex-col items-center
+            <div className="cursor-pointer absolute z-100 h-[100%] w-[99%]">
+            <FadeInSection className=""> 
+            <div className="absolute min-h-[98%] min-w-[100%] flex flex-col items-center
                justify-center"> 
                                       
-                <div className="absolute border-4 flex flex-col items-center 
-                 justify-between border-red-500 text-center min-w-[90%] min-h-[96%]"> 
-                      <div className="border py-[8%]">
-                        <div className={`${type === "solar" ? "font-semibold text-4xl text-gray-600 tracking-[0.05rem]"
-                        : "font-semibold text-4xl tracking-[0.05rem] text-white"}`}>
+                <div className="absolute flex flex-col items-center 
+                 justify-between text-center min-w-[90%] min-h-[96%]"> 
+                      <div className={id===1 || id===7 ? "py-[6.5rem]" : "py-[5rem]"}>
+                        <div className={`${type === "solar" || id===3 ? `font-semibold text-4xl
+                         text-gray-600 tracking-[0.05rem]`
+                        : `font-semibold text-4xl tracking-[0.05rem]
+                         text-white`}`}>
                           {name}
                         </div>                   
-                        <div className={`${type === "solar" ? "font-medium text-gray-600" : "font-medium text-white"} 
-                        ${type === "car" ? "underline" : ""}`}>
+                        <div className={`${type === "solar" || id===3 ? "font-medium text-gray-600" : "font-medium text-white"} 
+                        ${type === "car" ? "underline py-2" : "py-2"}`}>
                           {detail}
                         </div>  
                       </div>
                                         
                         
                       <div className="text-center w-[98%]">
-                          <div className={`${id===1 ? "border sm:flex sm:justify-center sm:gap-5" :
-                           "border sm:flex sm:justify-center sm:gap-5 pb-[11%]"}`}>      
+                          <div className={`${id===1 ? "sm:flex sm:justify-center sm:gap-5" :
+                           "sm:flex sm:justify-center sm:gap-5 pb-[11%]"}`}>      
                             <div className="opacity-[0.9] text-white bg-gray-700 border 
                               rounded-3xl flex py-[0.6rem] text-[13px] justify-center
                               font-bold mb-2 sm:w-[13rem] sm:mb-0 md:w-[17rem]">
@@ -178,22 +221,28 @@ export default function Home() {
                                 {buttonR}
                             </div>                       
                           </div> 
-                          <div className={id === 1 ? "border" : "hidden"}>   
-                                <KeyboardArrowDownIcon 
-                                  className="mt-[5%] text-4xl"
-                                />  
+                          <div className={id === 1 ? `
+                          cursor-pointer` : "hidden"}>    
+                            <KeyboardArrowDownIcon
+                             onMouseDown={id===1 ? "translate-y-[10rem]" : "translate-y-0"}
+                             className="mt-[5%] text-4xl"
+                            />       
                           </div> 
                       </div>  
                 </div>
            
-                <div className={id===7 ? `bottom-[0%] top-[94%] bg-white text-sm 
-                   font-semibold flex min-w-[102%]
-                   justify-center flex-col border-2 absolute z-20 text-center 
-                   tracking-wide md:sticky md:min-w-[100%]`
-                    : "hidden"}>   
-                   <div className="border min-w-screen bg-white md:flex justify-center">
-                     {footer} <h1 className="hidden sm:flex justify-center">
-                       &nbsp;Engage Locations
+                <div className={id===7 ? `bottom-2 bg-white text-gray-800
+                   fixed min-w-[100%] ml-[1%] text-center text-[0.75rem] 
+                   flex-wrap font-bold pb-1 tracking-wide sm:tracking-wider
+                   lg:tracking-widest`: "hidden"}> 
+
+                   <div className="bg-white shadow-md
+                    md:flex justify-center">
+                     Mesla © 2022&nbsp;&nbsp;&nbsp;Privacy & Legal
+                     &nbsp;&nbsp;&nbsp;Vehicle Recalls&nbsp;&nbsp;&nbsp;Contact
+                     &nbsp;&nbsp;&nbsp;Careers&nbsp;&nbsp;&nbsp;News 
+                     <h1 className="hidden sm:flex justify-center">
+                       &nbsp;&nbsp;&nbsp;Engage Locations
                       </h1>
                    </div>
                 </div>
@@ -201,6 +250,7 @@ export default function Home() {
             </div>
             
             </FadeInSection> 
+            </div>
           </div>     
        </div>     
       ))}
