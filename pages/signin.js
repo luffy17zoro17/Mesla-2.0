@@ -7,12 +7,13 @@ const signin = () => {
   return (
     <div className="">
       <SignInBar/>
-      <div>
+      <div className='mt-[3rem]'>
        <div className="w-[100%] flex flex-col 
        items-center gap-5 font-semibold tracking-wide">
           <h1 className="text-4xl font-semibold pt-5 pr-[12rem]">Sign In</h1>
-          <div className="flex flex-col">
-            &nbsp; &nbsp;<h1 className="pl-4">Email Address<InfoIcon color="primary"/></h1>
+          <div className="flex flex-col font-medium">
+            &nbsp; &nbsp;<h1 className="pl-4 text-gray-500">Email Address
+            <InfoIcon  className="ml-1" color="primary"/></h1>
             <input className="bg-gray-100 h-[2.6rem] pl-5 mt-2 w-[20rem] rounded-3xl"/>
           </div>
          

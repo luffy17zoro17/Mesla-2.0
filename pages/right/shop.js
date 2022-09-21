@@ -51,10 +51,19 @@ const SwipeableTextMobileStepper=()=>{
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
+
+    if(activeStep === maxSteps-1){
+      setActiveStep(0);
+    }
   };
+
 
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
+
+    if(activeStep===0) {
+      setActiveStep(maxSteps-1);
+    }
   };
 
   const handleStepChange = (step) => {
@@ -80,7 +89,7 @@ const SwipeableTextMobileStepper=()=>{
         {products.map((product, index) => (
           <div key={product.id} className="absolute min-h-screen min-w-[100%]">
             {Math.abs(activeStep - index) <= 2 ? (
-            <div className=""> 
+            <div className="fixed z-0 h-screen w-screen"> 
               <Image
                 component="Image"
                 layout="fill"
@@ -95,33 +104,32 @@ const SwipeableTextMobileStepper=()=>{
                  text-center flex flex-col items-center justify-end">  
                   <h1 className="text-5xl">{product.item}</h1>
                   <h2 className="text-2xl">{product.detail}</h2>
-                  <div className="w-[26rem] pt-2 pb-3 bg-black rounded-md sm:w-[18rem]">
+                  <div className="w-[26rem] pt-2 pb-3 bg-black cursor-pointer 
+                    rounded-md sm:w-[18rem]">
                     Shop Now
                   </div>
                 </div>
               </div>
 
-              {/* <svg className="absolute" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">        
-                  <polygon points="40,40 50,25 50,75 20,30"
-                            fill="none" stroke="black" />
-              </svg> */}
             </div> 
             ) : null}
           </div>
         ))}
        </AutoPlaySwipeableViews>
-    
+        
+     
        <MobileStepper
-            className="z-1 flex justify-center bg-transparent w-[100%] py-[2%]"
+            className="bg-transparent bottom-4 absolute z-0 mx-[25%] xs:mx-[13%]
+            sm:mx-[30%] md:mx-[35%] xl:mx-[42%]"
             steps={maxSteps}
-            variant="dots"
             activeStep={activeStep}
             nextButton={
+      
               <Button
-                size="small"
-                className="text-white"
+                size="large text-white"
+                className="scale-[140%] hover:text-green-300"
                 onClick={handleNext}
-                disabled={activeStep === maxSteps - 1}
+                
               >
                 {theme.direction === 'rtl' ? (
                   <KeyboardArrowLeft />
@@ -129,15 +137,19 @@ const SwipeableTextMobileStepper=()=>{
                   <KeyboardArrowRight />
                 )}
               </Button>
+           
             }
             backButton={
-              <Button className="text-white" size="small" onClick={handleBack} disabled={activeStep === 0}>
+             
+              <Button className="scale-[140%] hover:text-green-300"
+               size="large text-white" onClick={handleBack}>
                 {theme.direction === 'rtl' ? (
                   <KeyboardArrowRight />
                 ) : (
                   <KeyboardArrowLeft />
                 )}   
               </Button>
+          
             }
        />
     

@@ -5,7 +5,7 @@
 .fade-out-section {
     opacity:1;
     visibility:visible;
-    transition: opacity 90ms ease-out, visibility 90ms ease-out;
+    transition: opacity 250ms ease-out, visibility 250ms ease-out;
     will-change:opacity,visibility; 
 }
 
@@ -20,7 +20,7 @@
 .fade-in-section {
     opacity: 0;
     visibility:hidden;
-    transition: opacity 90ms ease-in, visibility 90ms ease-in;
+    transition: opacity 250ms ease-in, visibility 250ms ease-in;
     will-change:opacity,visibility; 
 }
 

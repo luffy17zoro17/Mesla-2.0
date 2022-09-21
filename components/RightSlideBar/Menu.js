@@ -33,28 +33,30 @@ const Menu = () => {
 
 
   return (
-   
-    <div className="text-white flex flex-col justify-center 
-       items-center top-[-3.3rem] right-0 bg-black font-semibold
-        w-[20rem] pt-[6rem]">
-      <div className="right-5 
-      w-[17rem] top-0 bg-black fixed
-      h-[7rem]">
-      </div>    
-      <div className="space-y-[1rem] pt-[1rem] lg:pt-[0rem]">
+    <>
+    
+    <div className="top-0 right-0 fixed z-30 h-[100%] shadow-lg
+      shadow-violet-500 bg-black w-[21rem]">
+    <div className="w-[18rem] h-[7rem] bg-black z-50 fixed right-5 top-0"></div>
+    <div className="text-white flex flex-col justify-center h-[100%]
+         overflow-y-auto overflow-visible fixed z-30 right-0 top-0 items-center
+         bg-black font-semibold w-[20rem]">
+      <div className="min-h-[10%] pt-[7rem]">
+      <div className="space-y-4">
       {menuItems.map((items)=>
         <div key={items.id}>
-         <div className="w-[16rem]"> 
-          <h1 className={`pl-5 pb-1 hover:bg-gray-700 cursor-pointer 
-           rounded h-7 ${items.id>0 && items.id<7 ? "lg:hidden" : "flex"}`}>
+         <div className="w-[15.3rem]"> 
+          <h1 className={`pl-5 hover:bg-gray-700 hover:py-[0.1rem] cursor-pointer 
+           rounded h-8 ${items.id>0 && items.id<7 ? "lg:hidden" : "flex"}`}>
             <Link className="" href={items.link}><a>{items.name}</a></Link>
           </h1>
          </div> 
         </div>
       )}
       </div>
-      <span className="flex rounded mt-5 justify-start items-center 
-        w-[16rem] hover:bg-gray-600 pb-2 pl-[1.1rem]">
+      <div className="pb-[7rem]">
+      <span className="flex rounded mt-5 py-1 pb-2 justify-start items-center 
+        w-[16rem] hover:bg-gray-600 pl-[1.1rem]">
         <PublicTwoToneIcon className="mb-2 mr-2"/>
         <div className="tracking-wider">
             India
@@ -64,8 +66,13 @@ const Menu = () => {
             </h2>
         </div>
       </span>
+      </div>
+      </div>
       
     </div>
+    </div>
+  
+    </>
   
   );
 }

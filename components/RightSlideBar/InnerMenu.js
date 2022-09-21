@@ -47,7 +47,7 @@ id:4,name:"Lifestyle",link:"",value:{
 const InnerMenu = () => {
 
   return (
-    <div className="absolute z-10 h-screen flex flex-col justify-start
+    <div className="shadow-lg shadow-violet-500 absolute z-30 h-screen flex flex-col justify-start
        items-center top-0 right-0 bg-black w-[20rem] pt-14 lg:pt-0">
       <div className="pt-[1rem] space-y-[0.7rem]">
        <div className="fixed mt-[0.9rem] px-2 text-black z-10"><SearchIcon/></div>
@@ -59,9 +59,9 @@ const InnerMenu = () => {
         <div key={items.id}>
          <div className="w-[16rem]"> 
           <div className="hover:bg-gray-700 cursor-pointer 
-           rounded pb-1 pl-5">
+           rounded py-1 pl-5">
             <div>
-              <a className={items.id >0 && items.id<5 && "lg:hidden"}>
+              <div className={items.id >0 && items.id<5 && "lg:hidden"}>
 
                 <Link replace={true} href={items.value}>
                    <a>{items.name}</a>
@@ -69,23 +69,23 @@ const InnerMenu = () => {
 
                 {items.id > 0 && items.id < 5 ? 
                 (<ChevronRightIcon className="absolute 
-                 right-11 mt-[0.2rem]"/>)
+                 right-11 mt-[0.02rem]"/>)
                  : (<div></div>)}
-              </a>
+              </div>
             </div>
           </div>
          </div> 
         </div>
        )}  
       </div>
-      <div className="w-[16rem] pl-5 pb-1 mt-3 hover:bg-gray-700 cursor-pointer
+      <div className="w-[16rem] pl-5 py-1 mt-3 hover:bg-gray-700 cursor-pointer
        rounded">
         Shop FAQ
       </div>
       <Link href="/signin"><a className="w-[16rem] hover:bg-gray-700 cursor-pointer
-       rounded my-[0.1rem] pb-1 mt-3 pl-5">Sign In</a></Link>
+       rounded my-[0.1rem] py-1 mt-3 pl-5">Sign In</a></Link>
       <span className="flex rounded mt-5 justify-start items-center 
-        w-[16rem] hover:bg-gray-600 pb-2 pl-[1.1rem]">
+        w-[16rem] hover:bg-gray-600 pb-2 pt-1 pl-[1.1rem]">
         <PublicTwoToneIcon className="mb-2 mr-2"/>
         <div className="tracking-wider">
             India

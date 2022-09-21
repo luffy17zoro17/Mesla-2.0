@@ -1,64 +1,94 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar';
 import SpeedIcon from '@mui/icons-material/Speed';
+import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
+import BgBlur from '../components/BgBlur';
+import Menu from '../components/RightSlideBar/Menu';
+
 
 const models = () => {
+
+  const [isShow,setIsShow] = useState(false);
+
+
+  const handleToggle = () => {
+
+     setIsShow(!isShow);
+  }
+
+
+
   return (
     <div>
-       <div className="absolute z-10 w-[100%] border h-[3.6rem] bg-black opacity-75">
-        <Navbar/>
-       </div>
+    <>
+    <Navbar/>
+  
+    <button onClick={handleToggle} className={`overflow-y-hidden px-4 pb-0.5
+       bg-gray-400 opacity-[0.9rem] rounded-lg hover:bg-gray-500 
+       cursor-pointer absolute z-30 right-4 top-[0.2rem] 
+       m-3 xl:bg-transparent xl:text-white xl:shadow xl:shadow-green-300`}>
+         Menu
+    </button>
+    {isShow ?
+    (
+        <>   
+           <BgBlur/> 
+           <Menu/>
+           
+         
+         <button onClick={handleToggle} className="absolute z-50 top-7 right-11">
+            <CancelPresentationIcon 
+              className="text-white p-[0.2rem]
+             hover:bg-gray-600 rounded scale-[1.5]"/>
+         </button>
+        </>
+     ) : (<div></div>)}
        
-       
-       <div className="absolute flex flex-col text-center justify-between min-w-[100%] 
-         min-h-[100%]">
-        
-         <div className="absolute w-[100%] z-10 font-semibold text-6xl border
-          bg-black opacity-50 text-white mt-[5rem]">
+      
+         <div className="absolute text-center w-[100%] z-10 font-semibold text-6xl border
+          bg-black opacity-50 text-white top-[5rem]">
              Model S
              <h1 className="text-[1.2rem] font-normal tracking-wide pb-1 pt-3">Plaid</h1> 
          </div>   
           
-         <div className="absolute z-10 flex flex-col
-             text-white bottom-0 h-50
-            py-9 w-[100%] rounded-tl-xl rounded-br-xl bg-black 
-            opacity-75">
-
-          <div className="flex flex-col h-[20%] mb-[2rem]
-           justify-center lg:flex-row">
-    
-            <div className="flex text-xl font-semibold justify-center
-             sm:text-3xl sm:space-x-[2rem]">
+         <>
+           <div className="flex flex-col absolute z-10 text-white bg-black py-5
+            opacity-75 bottom-0 w-[100%] lg:flex lg:flex-row lg:justify-center lg:items-center">
+            <div className="flex h-[4rem] justify-evenly font-semibold text-lg lg:flex-row 
+             lg:items-evenly lg:space-x-[5rem] lg:my-7">
                
-               <span className="w-[8rem]">396 mi <br/>
-                <h1 className="text-xs pt-[0.5rem]">Range (EPA est.)</h1>
+               <span className="text-center flex flex-col justify-between">
+                 <span className="sm:text-3xl">396 mi</span> 
+                 <span className="font-light text-xs sm:text-[0.85rem]">Range (EPA est.)</span>
                </span>
-               <span className="w-[8rem]">
-                  <SpeedIcon className="scale-[60%] sm:scale-[100%] 
-                   sm:mr-1 sm:mb-2" fontSize="large"/>1.99 s <br/>
-                  <h1 className="text-xs">0-60 mph*</h1>
+               <span className="text-center flex flex-col justify-between">
+                  <span className="flex items-start sm:text-3xl">
+                    1.99 s
+                  </span>
+                  <span className="font-light text-xs sm:text-[0.85rem]">0-60 mph*</span>
                </span>
-               <span className="w-[8rem]">200 mph<br/>
-                <h1 className="text-xs pt-[0.5rem]">Top Speed†</h1>  
+               <span className="text-center flex flex-col justify-between">
+                 <span className="sm:text-3xl">200 mph</span>
+                 <span className="font-light text-xs sm:text-[0.85rem]">Top Speed
+                 <sup className="text-[0.5rem] font-semibold">†</sup></span>  
                </span>
-               <span className="hidden lg:flex flex-col w-[8rem]">1,020 hp<br/>
-                <h1 className="text-xs pt-[0.5rem]">Peak Power</h1>
+               <span className="hidden justify-between text-center flex-col lg:flex">
+                 <span className="text-3xl">1,020 hp</span>
+                 <span className="font-light text-[0.85rem] lg:pt-[0.5rem]">Peak Power</span>
                </span>
             </div>  
-            <div className="w-[100%] flex justify-center lg:w-[16rem]">
-              <div className="border-[0.16rem] pt-1 pb-2 mt-7 rounded font-semibold
-               cursor-pointer w-[25rem] lg:w-[22rem] lg:ml-[3rem]
-               h-[2.8rem] lg:mt-0 hover:border-black hover:bg-white
-                hover:text-black">
-                Order Now
-              </div>
+            <div className="cursor-pointer border-2 h-[3rem] mx-[10%] mt-5 mb-5 flex items-center rounded-md 
+             justify-center sm:mx-[30%] lg:mx-[0%] lg:px-[5%] lg:ml-[5rem] lg:mb-[2.1rem] hover:border-black 
+             hover:bg-white hover:text-black">     
+                Order Now   
             </div>  
-               
-          </div>  
+           </div> 
+          </>     
+       
          
-         </div> 
-         <div className="">
+        
+         <div>
           <Image
               src="https://images.unsplash.com/photo-1617719134320-22d03ed67fb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
               layout="fill"
@@ -66,8 +96,7 @@ const models = () => {
               className="object-cover"
           />  
          </div>
-       </div>  
-        
+    </>     
     </div>
   )
 }
@@ -75,5 +104,3 @@ const models = () => {
 export default models
 
 
-
-// 

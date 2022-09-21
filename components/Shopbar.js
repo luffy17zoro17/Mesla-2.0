@@ -109,8 +109,8 @@ const Shopbar= () => {
               <Link href="/cart"><ShoppingCartIcon/></Link>
             </li>
             <li className="px-4 pb-1 bg-gray-400 opacity-[0.9rem] rounded-lg 
-            hover:bg-gray-500 cursor-pointer xl:bg-transparent">
-              <button onClick={handleToggle}>
+            hover:bg-gray-500 xl:bg-transparent">
+              <button className="cursor-pointer" onClick={handleToggle}>
                 Menu
               </button>
               {isVisible ?
@@ -124,7 +124,7 @@ const Shopbar= () => {
                 </div>
                 <button onClick={handleToggle}>
                    <CancelPresentationIcon 
-                     className="fixed top-7 right-7 z-10 p-[0.2rem]
+                     className="fixed top-7 right-7 z-30 p-[0.2rem]
                     hover:bg-gray-600 rounded scale-[1.5]"/>
                 </button>
                </div>) : (<div></div>)}

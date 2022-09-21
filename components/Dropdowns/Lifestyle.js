@@ -65,8 +65,8 @@ const Lifestyle = () => {
          width={400}
          className="object-cover relative"
        />
-       <h2 className="text-sm font-bold fixed z-40 top-[35%] 
-        right-[20%] opacity-[0.5]
+       <h2 className="text-sm font-bold fixed z-40 top-[26.9%] 
+        right-[22.5%] opacity-[0.5]
         text-black -rotate-[9deg]">
          M E S L A
        </h2>
