@@ -33,7 +33,7 @@ const Shopbar= () => {
 
 
   return (
-    <div className="text-white flex max-w-screen border-pink-300
+    <div className="text-white flex max-w-screen
       w-[100%] absolute z-10 h-[3.5rem] hover:bg-gray-800">
        <ul className="flex items-center justify-around
         w-[100%] gap-[50%]"> 
