@@ -10,7 +10,7 @@ import BgBlur from '../components/BgBlur';
 
 
 
-const modely = () => {
+const Modely = () => {
 
   const [isShow,setIsShow] = useState(false);
 
@@ -102,7 +102,7 @@ const modely = () => {
     );
 }
   
-export default modely
+export default Modely
 
 
 

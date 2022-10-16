@@ -9,7 +9,7 @@ import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 
 
 
-const solarpanels = () => {
+const Solarpanels = () => {
 
   const [isShow,setIsShow] = useState(false);
 
@@ -106,7 +106,7 @@ const solarpanels = () => {
   )
 }
 
-export default solarpanels
+export default Solarpanels
 
 
 

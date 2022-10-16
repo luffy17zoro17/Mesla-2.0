@@ -8,7 +8,7 @@ const NavbarTop = () => {
       rounded-bl-lg rounded-br-lg sticky z-30 top-0 h-[3rem] right-0 py-2 pb-4">
       <span className="underline underline-offset-4 font-medium 
        tracking-[0.05rem] cursor-pointer">
-        Read Mesla's 2021 Report
+        Read Mesla&apos;s 2021 Report
       </span>
   
     </span>

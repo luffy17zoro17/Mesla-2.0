@@ -7,7 +7,7 @@ import BgBlur from '../components/BgBlur';
 import Menu from '../components/RightSlideBar/Menu';
 
 
-const models = () => {
+const Models = () => {
 
   const [isShow,setIsShow] = useState(false);
 
@@ -101,6 +101,6 @@ const models = () => {
   )
 }
 
-export default models
+export default Models
 
 

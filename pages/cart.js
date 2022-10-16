@@ -2,7 +2,7 @@ import React from 'react';
 import Link from "next/link";
 import Shopbar from "../components/Shopbar";
 
-const cart = () => {
+const Cart = () => {
   return (
     
     <>
@@ -61,4 +61,4 @@ const cart = () => {
   )
 } 
 
-export default cart
+export default Cart

@@ -9,7 +9,7 @@ import Menu from '../components/RightSlideBar/Menu';
 
 
 
-const modelx = () => {
+const Modelx = () => {
 
   const [isShow,setIsShow] = useState(false);
 
@@ -103,4 +103,4 @@ const modelx = () => {
   );
 }
 
-export default modelx
+export default Modelx

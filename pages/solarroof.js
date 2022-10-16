@@ -10,7 +10,7 @@ import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 
 
 
-const solarroof = () => {
+const Solarroof = () => {
 
   const [isShow,setIsShow] = useState(false);
 
@@ -109,7 +109,7 @@ const solarroof = () => {
   )
 }
 
-export default solarroof
+export default Solarroof
 
 
 

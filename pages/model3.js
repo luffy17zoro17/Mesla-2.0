@@ -10,7 +10,7 @@ import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 
 
 
-const model3 = () => {
+const Model3 = () => {
 
   const [isShow,setIsShow] = useState(false);
 
@@ -103,7 +103,7 @@ const model3 = () => {
          
 }
 
-export default model3
+export default Model3
 
 
 // https://images.unsplash.com/photo-1619572945516-7598cb601a11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80

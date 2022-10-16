@@ -3,7 +3,7 @@ import SignInBar from '../components/SignInBar';
 import InfoIcon from '@mui/icons-material/Info';
 
 
-const signin = () => {
+const Signin = () => {
   return (
     <div className="">
       <SignInBar/>
@@ -52,4 +52,4 @@ const signin = () => {
   )
 }
 
-export default signin
+export default Signin
