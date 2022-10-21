@@ -63,7 +63,7 @@ const Navbar= () => {
           font-semibold md:right-[0rem]">
             <li className="px-4 pb-0.5 cursor-pointer 
              hover:bg-green-500 hover:shadow-xl hover:shadow-black rounded-lg">
-              <Link href="/right/shop" as="/right/shop"
+              <Link href="/shop" as="/shop"
                rel="stylesheet preload prefetch">
                 <a>Shop</a>
               </Link>

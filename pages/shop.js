@@ -1,8 +1,8 @@
 
 import React,{forwardRef} from "react";
-import ClickOutside from "../../components/Searchbar/ClickOutside";
+import ClickOutside from "../components/Searchbar/ClickOutside";
 
-import Shopbar from '../../components/Shopbar';
+import Shopbar from '../components/Shopbar';
 
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -75,7 +75,7 @@ const SwipeableTextMobileStepper=()=>{
 
   return (
    <>
-    <div className="relative w-[100%] h-screen">
+    <div className="relative w-[100%]">
     <div className="bg-black sticky top-0 left-0 w-[100%] z-30"><Shopbar/></div>
     <div className="">
     <Box className="">

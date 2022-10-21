@@ -34,7 +34,7 @@ const Shopbar= () => {
 
   return (
     <div className="text-white flex fixed
-      w-[100%] absolute z-10 h-[3.8rem] hover:bg-gray-800">
+      w-[100%] z-10 h-[3.8rem] hover:bg-gray-800">
        <ul className="flex items-center justify-around
         w-[100%] gap-[50%]"> 
         
