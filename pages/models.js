@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 import SpeedIcon from '@mui/icons-material/Speed';
 import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 import BgBlur from '../components/BgBlur';
@@ -22,12 +22,15 @@ const Models = () => {
   return (
     <div>
     <>
-    <Navbar/>
+    <div className="sticky top-0 right-0 z-30">
+       <div className='absolute top-[-1.2rem]'><Navbar/></div>
+     </div> 
   
     <button onClick={handleToggle} className={`overflow-y-hidden px-4 pb-0.5
        bg-gray-400 opacity-[0.9rem] rounded-lg hover:bg-gray-500 
        cursor-pointer absolute z-30 right-4 top-[0.2rem] 
-       m-3 xl:bg-transparent xl:text-white xl:shadow xl:shadow-green-300`}>
+       m-3 bg-transparent text-white shadow shadow-red-500
+       xl:shadow-green-300`}>
          Menu
     </button>
     {isShow ?
@@ -88,7 +91,7 @@ const Models = () => {
        
          
         
-         <div>
+         <div className=''>
           <Image
               src="https://images.unsplash.com/photo-1617719134320-22d03ed67fb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
               layout="fill"

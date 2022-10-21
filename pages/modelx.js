@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 import SpeedIcon from '@mui/icons-material/Speed';
 import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 import BgBlur from '../components/BgBlur';
@@ -21,12 +21,15 @@ const Modelx = () => {
 
   return (
     <>    
-         <Navbar/>
+         <div className="sticky top-0 right-0 z-30">
+           <div className='absolute top-[-1.2rem]'><Navbar/></div>
+         </div> 
   
          <button onClick={handleToggle} className={`overflow-y-hidden px-4 pb-0.5 
               bg-gray-400 opacity-[0.9rem] rounded-lg hover:bg-gray-500 
               cursor-pointer absolute z-30 right-7 top-[0.2rem] 
-              m-3 xl:bg-transparent xl:text-white`}>
+              m-3 bg-transparent text-white shadow shadow-red-500 
+              xl:shadow-green-300`}>
                 Menu
          </button>
          {isShow ?

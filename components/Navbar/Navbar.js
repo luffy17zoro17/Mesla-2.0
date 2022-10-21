@@ -19,39 +19,40 @@ const Navbar= () => {
         
          <ul className="w-[30%] pl-[4rem] xs:pl-7 text-lg font-bold tracking-[1rem] flex 
          justify-start">
-          <li className="pb-1">
+          <li className="pb-1 hover:shadow-xl font-serif hover:shadow-black">
             <Link href="/"><a>MESLA</a></Link>
           </li>
          </ul>
          
          <ul className="hidden justify-center items-center absolute font-semibold
           w-[50%] xl:flex">
-           <li className="px-4 pb-0.5 hover:bg-green-500 rounded-lg">
+           <li className="px-4 pb-0.5 hover:bg-green-500 rounded-lg hover:shadow-xl hover:shadow-black">
              <Link href="/modelx" as="modelx" rel="stylesheet preload prefetch">
               <a>Model X</a>
              </Link>
            </li> 
-           <li className="px-4 pb-0.5 hover:bg-green-500 rounded-lg">
+           <li className="px-4 pb-0.5 hover:bg-green-500 hover:rounded-lg hover:shadow-xl
+           hover:shadow-black">
              <Link href="/model3" as="model3" rel="stylesheet preload prefetch">
               <a>Model 3</a>
              </Link>
            </li>
-           <li className="px-4 pb-0.5 hover:bg-green-500 rounded-lg">
+           <li className="px-4 pb-0.5 hover:bg-green-500 rounded-lg hover:shadow-xl hover:shadow-black">
              <Link href="/models" as="models" rel="stylesheet preload prefetch">
               <a>Model S</a>
              </Link>
            </li>
-           <li className="px-4 pb-0.5 hover:bg-green-500 rounded-lg">
+           <li className="px-4 pb-0.5 hover:bg-green-500 rounded-lg hover:shadow-xl hover:shadow-black">
              <Link href="/modely" as="modely" rel="stylesheet preload prefetch">
                <a>Model Y</a>
              </Link>
            </li>
-           <li className="px-4 pb-0.5 hover:bg-green-500 rounded-lg">
+           <li className="px-4 pb-0.5 hover:bg-green-500 rounded-lg hover:shadow-xl hover:shadow-black">
              <Link href="/solarroof" as="solarroof" rel="stylesheet preload prefetch">
                <a>Solar Roof</a>
              </Link>
            </li>
-           <li className="px-4 pb-0.5 hover:bg-green-500 rounded-lg">
+           <li className="px-4 pb-0.5 hover:bg-green-500 rounded-lg hover:shadow-xl hover:shadow-black">
              <Link href="/solarpanels" as="solarpanels" rel="stylesheet preload prefetch">
                <a>Solar Panels</a>
              </Link>
@@ -61,13 +62,13 @@ const Navbar= () => {
          <ul className="flex justify-end
           font-semibold w-[18%]">
             <li className="px-4 pb-0.5 cursor-pointer
-             hover:bg-green-500 rounded-lg hidden md:flex">
+             hover:bg-green-500 hover:shadow-xl hover:shadow-black rounded-lg hidden md:flex">
               <Link href="/right/shop" as="/right/shop"
                rel="stylesheet preload prefetch">
                 <a>Shop</a>
               </Link>
             </li>
-            <li className="px-4 pb-0.5 mr-[7rem] cursor-pointer
+            <li className="px-4 pb-0.5 mr-[7rem] cursor-pointer hover:shadow-xl hover:shadow-black
              hover:bg-green-500 rounded-lg hidden md:flex">
               <Link href="/signin"><a>Account</a></Link>
             </li>

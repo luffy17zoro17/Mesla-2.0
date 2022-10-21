@@ -33,14 +33,14 @@ const Shopbar= () => {
 
 
   return (
-    <div className="text-white flex max-w-screen
-      w-[100%] absolute z-10 h-[3.5rem] hover:bg-gray-800">
+    <div className="text-white flex fixed
+      w-[100%] absolute z-10 h-[3.8rem] hover:bg-gray-800">
        <ul className="flex items-center justify-around
         w-[100%] gap-[50%]"> 
         
          <ul className="w-[30%] pl-7 text-lg font-bold flex gap-[1rem] 
           justify-start items-center">
-          <li className="tracking-[1rem] pb-1">
+          <li className="tracking-[1rem] pb-1 font-serif shadow-xl shadow-black">
             <Link href="/"><a>MESLA</a></Link>
           </li>
            <h1><hr className="w-[0.02rem] bg-white pt-4 border"/></h1>

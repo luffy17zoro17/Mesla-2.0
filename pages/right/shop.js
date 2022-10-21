@@ -75,21 +75,22 @@ const SwipeableTextMobileStepper=()=>{
 
   return (
    <>
-    <div className="bg-black"><Shopbar/></div>
-    <Box className="absolute h-[100%] min-w-[100%]">
+    <div className="relative w-[100%] h-screen">
+    <div className="bg-black sticky top-0 left-0 w-[100%] z-30"><Shopbar/></div>
+    <div className="">
+    <Box className="">
 
        <AutoPlaySwipeableViews
-        className="absolute h-[100%]
-         min-w-[100%]"
+        className=""
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
        >
         {products.map((product, index) => (
-          <div key={product.id} className="absolute min-h-screen min-w-[100%]">
+          <div key={product.id} className="">
             {Math.abs(activeStep - index) <= 2 ? (
-            <div className="fixed z-0 h-screen w-screen"> 
+            <div className="relative z-30 h-screen"> 
               <Image
                 component="Image"
                 layout="fill"
@@ -98,16 +99,21 @@ const SwipeableTextMobileStepper=()=>{
                 alt=""
               />
              
-              <div className="absolute w-[100%] h-[98%]
+              <div className="absolute w-full h-[100%]
                flex flex-col items-center justify-center">
-                <div className="font-bold h-[70%] space-y-4 text-white
-                 text-center flex flex-col items-center justify-end">  
-                  <h1 className="text-5xl">{product.item}</h1>
-                  <h2 className="text-2xl">{product.detail}</h2>
-                  <div className="w-[26rem] pt-2 pb-3 bg-black cursor-pointer 
-                    rounded-md sm:w-[18rem]">
+                <div className="font-bold h-[40%] relative
+                space-y-4 text-white 
+                 text-center flex flex-col items-center justify-center">  
+                  <h1 className="text-[6vmin] z-30 p-[4vmin]">{product.item}</h1>
+                  <h2 className="text-[3vmin] z-30 p-[4vmin]">{product.detail}</h2>
+                  <div className="px-[4vmin] text-[4vmin] pt-2 pb-3
+                   bg-black cursor-pointer z-30 text-yellow-300
+                    rounded-md">
                     Shop Now
                   </div>
+                  <div className="bg-black border-4 rounded-b-xl
+                   absolute z-0 w-[100%] h-[100%] opacity-40 
+                   bottom-0"/>
                 </div>
               </div>
 
@@ -119,15 +125,18 @@ const SwipeableTextMobileStepper=()=>{
         
      
        <MobileStepper
-            className="bg-transparent bottom-4 absolute z-0 mx-[25%] xs:mx-[13%]
-            sm:mx-[30%] md:mx-[35%] xl:mx-[42%]"
+            className=" absolute flex justify-center z-0
+             scale-[2] mb-[4rem] 
+             bg-transparent"
             steps={maxSteps}
             activeStep={activeStep}
             nextButton={
       
               <Button
-                size="large text-white"
-                className="scale-[140%] hover:text-green-300"
+                size="large"
+                className="flex scale-[2.5] text-orange-300
+              absolute bottom-[3rem] mr-[-22vmin]
+              hover:text-green-600"
                 onClick={handleNext}
                 
               >
@@ -141,8 +150,10 @@ const SwipeableTextMobileStepper=()=>{
             }
             backButton={
              
-              <Button className="scale-[140%] hover:text-green-300"
-               size="large text-white" onClick={handleBack}>
+              <Button className="flex text-orange-300
+              absolute bottom-[3rem] scale-[2.5] ml-[-22vmin]
+               hover:text-green-600"
+               size="large" onClick={handleBack}>
                 {theme.direction === 'rtl' ? (
                   <KeyboardArrowRight />
                 ) : (
@@ -154,7 +165,8 @@ const SwipeableTextMobileStepper=()=>{
        />
     
     </Box>
-  
+    </div>
+    </div>
    </>
   );
 }

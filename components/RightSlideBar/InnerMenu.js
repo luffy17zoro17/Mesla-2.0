@@ -50,10 +50,12 @@ const InnerMenu = () => {
     <div className="shadow-lg shadow-violet-500 absolute z-30 h-screen flex flex-col justify-start
        items-center top-0 right-0 bg-black w-[20rem] pt-14 lg:pt-0">
       <div className="pt-[1rem] space-y-[0.7rem]">
-       <div className="fixed mt-[0.9rem] px-2 text-black z-10"><SearchIcon/></div>
-        <div className="pb-3 lg:hidden">
+       
+        <div className="flex flex-col justify-center
+         items-start lg:hidden">
           <input className="relative text-black rounded w-[16rem] pt-1 pl-9 pb-2"
          placeholder="Search"/>
+         <div className="px-2 text-black z-10 absolute"><SearchIcon/></div>
         </div>
        {menuItems.map((items)=>
         <div key={items.id}>

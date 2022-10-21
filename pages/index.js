@@ -148,17 +148,18 @@ export default function Home() {
     
     
    <button onClick={handleToggle} className={`px-4 pb-0.5
-    fixed z-30 right-4 top-[4.45rem] shadow-md shadow-violet-300 text-white
-      bg-cyan-800
-      opacity-[0.9rem] rounded-lg hover:bg-gray-500 
+    fixed z-30 right-4 top-[4.47rem] shadow-md shadow-violet-300 text-white
+      font-mono font-bold
+      opacity-[0.9rem] rounded-lg hover:text-cyan-300
       cursor-pointer 
-      m-3 xl:bg-transparent xl:text-white xl:shadow xl:shadow-green-300`}>
+      m-3 xl:bg-transparent text-white shadow shadow-red-500
+      xl:shadow-green-300 hover:shadow hover:shadow-violet-600`}>
         Menu
     </button>
     {isShow ?
   
            (
-               <>                      
+               <div>                      
                 <Menu/>
                 <BgBlur/> 
                   
@@ -169,7 +170,7 @@ export default function Home() {
                     hover:bg-gray-600 rounded scale-[1.5]"/>
                 </button>
             
-               </>
+               </div>
     ) : (<div></div>)}
 
     <section className={isShow ? `overflow-y-hidden fixed h-[100%] w-[100%]` 
@@ -201,8 +202,11 @@ export default function Home() {
                          text-white z-30`}>
                           {name}
                         </div>                   
-                        <div className={`${type === "solar" || id===3 ? "font-medium text-gray-600" : 
-                        "font-medium text-white"} ${type === "car" ? "underline cursor-pointer py-2" : "py-2"}`}>
+                        <div className={`${type === "solar" || id===3 ? 
+                        `shadow-md shadow-white font-medium text-gray-600` 
+                        : "font-medium text-white shadow-md shadow-green-300"}
+                         ${type === "car" ? `underline cursor-pointer py-2 
+                        ` : "py-2"}`}>
                           {detail}
                         </div>  
                      </div>   
@@ -214,12 +218,13 @@ export default function Home() {
                            w-[26rem] sm:w-[29rem] md:flex md:justify-center 
                             md:gap-5 md:w-[80%]">    
                             <div className="cursor-pointer
-                              opacity-[0.9] text-white bg-gray-700 border 
-                              rounded-3xl py-[0.9rem] text-[13px]
+                              opacity-[0.7] text-white bg-gray-700 border 
+                              rounded-3xl py-[0.9rem] text-[13px] shadow-xl shadow-black
                               font-bold mb-2 hover:opacity-100 md:w-[22rem] md:py-[1rem]">
                                 {buttonL}
                             </div>             
-                            <div className={id === 7 ? "hidden" : `cursor-pointer 
+                            <div className={id === 7 ? "hidden" : `cursor-pointer shadow-xl
+                             shadow-black
                               text-[13px] font-bold opacity-[0.8] bg-gray-300 rounded-3xl mb-2
                               py-[0.9rem] hover:opacity-100
                               md:w-[22rem] md:py-[1rem]`}>
@@ -229,9 +234,11 @@ export default function Home() {
                           
     </div>  
     <div className={id === 1 ? `
-          cursor-pointer fixed mt-[3rem] flex w-[100%] top-[80%] justify-center lg:top-[74%]` : "hidden"}>    
+          cursor-pointer fixed mt-[3rem] flex w-[100%] top-[80%] justify-center 
+           lg:top-[74%]` : "hidden"}>    
           <KeyboardArrowDownIcon
-            className="mt-[5%] text-4xl text-cyan-500 hover:text-green-200"
+            className="mt-[5%] text-4xl text-cyan-500 scale-[2] shadow-xl shadow-black
+             hover:text-green-200 hover:shadow-red-500"
           />       
     </div> 
 
@@ -241,7 +248,7 @@ export default function Home() {
                    flex-wrap font-semibold pb-1 tracking-wide sm:tracking-wider
                    lg:tracking-widest`: "hidden"}> 
 
-                   <div className="bg-white shadow-md
+                   <div className="bg-white shadow shadow-black
                     md:flex justify-center">
                      Mesla © 2022&nbsp;&nbsp;&nbsp;Privacy & Legal
                      &nbsp;&nbsp;&nbsp;Vehicle Recalls&nbsp;&nbsp;&nbsp;Contact

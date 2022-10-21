@@ -28,7 +28,8 @@ const Charging = () => {
   return (
  
   
-    <div className="fixed bg-gray-800 text-white h-[26.8rem]
+    <div className="fixed top-[3rem] bg-gray-800 text-white h-[26.8rem]
+     shadow-xl shadow-black
       flex justify-evenly w-[100%] ml-[22rem] py-[5%]">
        {typesAndparts.map((typart)=>(
          

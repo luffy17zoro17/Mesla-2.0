@@ -62,7 +62,7 @@ const VehicleAccessories = () => {
   return (
  
    
-    <div className="fixed bg-gray-800 text-white
+    <div className="fixed bg-gray-800 text-white top-[3rem] shadow-xl shadow-black
       flex justify-evenly w-[100%] ml-[5.1rem] py-[5%] h-[26rem]">
        {AccessoryTypes.map((access)=>(
          

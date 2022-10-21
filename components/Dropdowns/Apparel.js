@@ -93,7 +93,7 @@ const ApparelTypes2 = [
 const Apparel = () => {
   return (
   
-    <div className="fixed bg-gray-800 justify-evenly
+    <div className="fixed bg-gray-800 justify-evenly shadow-xl shadow-black
       w-[100%] flex text-white py-[5%] mr-[11.1rem] h-[26.7rem]">
        {Categories.map((category)=>(
          
