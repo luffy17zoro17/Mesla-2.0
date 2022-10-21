@@ -151,7 +151,7 @@ const SwipeableTextMobileStepper=()=>{
             backButton={
              
               <Button className="flex text-orange-500
-              absolute bottom-[3rem] scale-[2.5] mr-[8rem]
+              absolute bottom-[3rem] scale-[2.5] mr-[rem]
                hover:text-green-300"
                size="large" onClick={handleBack}>
                 {theme.direction === 'rtl' ? (

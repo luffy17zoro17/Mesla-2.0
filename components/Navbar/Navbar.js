@@ -19,7 +19,7 @@ const Navbar= () => {
         
          <ul className="w-[30%] pl-[4rem] xs:pl-7 text-lg font-bold tracking-[1rem] flex 
          justify-start">
-          <li className="pb-1 hover:shadow-xl font-serif hover:shadow-black">
+          <li className="pb-1 shadow-xl font-serif shadow-black hover:shadow-none">
             <Link href="/"><a>MESLA</a></Link>
           </li>
          </ul>
