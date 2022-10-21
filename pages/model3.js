@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar/Navbar';
+import NavbarTop from '../components/Navbar/NavbarTop';
 import SpeedIcon from '@mui/icons-material/Speed';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import BgBlur from '../components/BgBlur';
@@ -25,6 +26,7 @@ const Model3 = () => {
     <div>
     <>
     <Navbar/>
+
   
       <button onClick={handleToggle} className={`overflow-y-hidden px-4 pb-0.5
         bg-gray-400 opacity-[0.9rem] rounded-lg hover:bg-gray-500 

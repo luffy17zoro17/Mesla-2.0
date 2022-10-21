@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 import Head from 'next/head'
 import Image from 'next/image'
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar/Navbar';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import NavbarTop from '../components/NavbarTop';
 
 import Menu from "../components/RightSlideBar/Menu";
 import BgBlur from "../components/BgBlur";
 
 import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
+import NavbarTop from "../components/Navbar/NavbarTop";
 
 
 
@@ -139,8 +139,8 @@ export default function Home() {
   
     
      <NavbarTop/>
-     <div className="sticky top-[3rem] right-0 z-30">
-       <div className="pt-5 absolute top-0 w-[100%]"><Navbar/></div>
+     <div className="sticky top-0 right-0 z-30">
+       <Navbar/>
      </div> 
    
     
@@ -175,17 +175,20 @@ export default function Home() {
     <section className={isShow ? `overflow-y-hidden fixed h-[100%] w-[100%]` 
     : ``}>
     
-    <div className="min-h-screen w-[100%]">      
+    <div className="w-[100%]">      
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type})=>(
     
-    <div key={id} className="snap-center relative z-10 h-[59rem] w-[100%]">
+    <div key={id} className="snap-center relative
+     z-10 h-screen w-[100%]">
         
             <Image
                 src={imgPath}
                 layout="fill"
-                className={id===1 ? "rounded-t-lg object-cover" : "object-cover"}
+                className={id===1 ? "rounded-t-lg object-cover" : 
+                "object-cover w-[100%]"}
                 alt=""
-            />          
+            />   
+           
             
     <FadeInSection className=""> 
         
