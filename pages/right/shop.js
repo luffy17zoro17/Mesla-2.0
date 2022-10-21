@@ -134,9 +134,9 @@ const SwipeableTextMobileStepper=()=>{
       
               <Button
                 size="large"
-                className="flex scale-[2.5] text-orange-300
-              absolute bottom-[3rem] mr-[-22vmin]
-              hover:text-green-600"
+                className="flex scale-[2.5] text-orange-500
+              absolute bottom-[3rem] ml-[8rem]
+              hover:text-green-300"
                 onClick={handleNext}
                 
               >
@@ -150,9 +150,9 @@ const SwipeableTextMobileStepper=()=>{
             }
             backButton={
              
-              <Button className="flex text-orange-300
-              absolute bottom-[3rem] scale-[2.5] ml-[-22vmin]
-               hover:text-green-600"
+              <Button className="flex text-orange-500
+              absolute bottom-[3rem] scale-[2.5] mr-[8rem]
+               hover:text-green-300"
                size="large" onClick={handleBack}>
                 {theme.direction === 'rtl' ? (
                   <KeyboardArrowRight />
