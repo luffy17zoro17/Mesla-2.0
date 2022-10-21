@@ -17,8 +17,8 @@ const Navbar= () => {
        <ul className="flex items-center justify-around
         w-[100%] gap-[50%]"> 
         
-         <ul className="w-[30%] pl-[4rem] xs:pl-7 text-lg font-bold tracking-[1rem] flex 
-         justify-start">
+         <ul className="w-[30%] left-[6vmin] xs:pl-7 text-lg font-bold tracking-[1rem] flex 
+         justify-start absolute">
           <li className="pb-1 shadow-xl font-serif shadow-black hover:shadow-none">
             <Link href="/"><a>MESLA</a></Link>
           </li>
@@ -59,10 +59,10 @@ const Navbar= () => {
            </li>    
          </ul>
         
-         <ul className="flex justify-end
-          font-semibold w-[18%]">
-            <li className="px-4 pb-0.5 cursor-pointer
-             hover:bg-green-500 hover:shadow-xl hover:shadow-black rounded-lg hidden md:flex">
+         <ul className="flex justify-end absolute right-[8rem] 
+          font-semibold md:right-[0rem]">
+            <li className="px-4 pb-0.5 cursor-pointer 
+             hover:bg-green-500 hover:shadow-xl hover:shadow-black rounded-lg">
               <Link href="/right/shop" as="/right/shop"
                rel="stylesheet preload prefetch">
                 <a>Shop</a>
@@ -72,8 +72,7 @@ const Navbar= () => {
              hover:bg-green-500 rounded-lg hidden md:flex">
               <Link href="/signin"><a>Account</a></Link>
             </li>
-            
-               
+                     
          </ul>   
         
        </ul>

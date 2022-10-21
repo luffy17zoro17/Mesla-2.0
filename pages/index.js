@@ -215,8 +215,8 @@ export default function Home() {
                         
     <div className="text-center w-[100%] top-[66%] fixed flex justify-center">
                           <div className="
-                           w-[26rem] sm:w-[29rem] md:flex md:justify-center 
-                            md:gap-5 md:w-[80%]">    
+                           w-[22rem] sm:w-[26rem] md:flex md:justify-center 
+                            md:gap-[6vmin] md:w-[75%]">    
                             <div className="cursor-pointer
                               opacity-[0.7] text-white bg-gray-700 border 
                               rounded-3xl py-[0.9rem] text-[13px] shadow-xl shadow-black
