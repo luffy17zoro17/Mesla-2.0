@@ -22,7 +22,7 @@ const Modelx = () => {
   return (
     <>    
          <div className="sticky top-0 right-0 z-30">
-           <div className='absolute top-[-1.2rem]'><Navbar/></div>
+           <div className=''><Navbar/></div>
          </div> 
   
          <button onClick={handleToggle} className={`overflow-y-hidden px-4 pb-0.5 

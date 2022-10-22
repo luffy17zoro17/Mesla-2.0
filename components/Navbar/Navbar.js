@@ -9,7 +9,7 @@ const Navbar= () => {
   
   return (
     
-    <div className='fixed w-[100%] pt-5'>
+    <div className='w-[100%] fixed'>
     <div className="text-white flex border-4 border-orange-300 
     shadow-md shadow-yellow-800
       w-[100%] z-30 h-[3.6rem] top-0 right-0 bg-black rounded-lg">

@@ -139,16 +139,15 @@ export default function Home() {
   
     
      <NavbarTop/>
-     <div className="sticky top-0 right-0 z-30">
-       <Navbar/>
-     </div> 
+      <div className="fixed top-13 z-20"><Navbar/></div>
+    
    
     
     
     
     
    <button onClick={handleToggle} className={`px-4 pb-0.5
-    fixed z-30 right-4 top-[4.47rem] shadow-md shadow-violet-300 text-white
+    fixed z-30 right-4 top-[3.3rem] shadow-md shadow-violet-300 text-white
       font-mono font-bold
       opacity-[0.9rem] rounded-lg hover:text-cyan-300
       cursor-pointer 
