@@ -45,7 +45,7 @@ const Shopbar= () => {
           </li>
            <h1><hr className="w-[0.02rem] bg-white pt-4 border"/></h1>
           <li className="pb-1">
-            <Link href="/right/shop"><a>Shop</a></Link>
+            <Link href="/shop"><a>Shop</a></Link>
           </li>
          </ul>
          
@@ -53,7 +53,7 @@ const Shopbar= () => {
            xl:flex">
            <div className="group"> 
            <div className="px-4 pb-1 hover:bg-gray-400 rounded-lg">
-             <Link href="/right/shop" as="/right/shop" 
+             <Link href="/shop" as="/shop" 
               rel="stylesheet preload prefetch">
               <a>Charging</a>
              </Link>
@@ -65,7 +65,7 @@ const Shopbar= () => {
 
            <div className="group">
            <div className="px-4 pb-1 hover:bg-gray-400 rounded-lg">
-              <Link href="/right/shop" as="/right/shop"
+              <Link href="/shop" as="/shop"
                 rel="stylesheet preload prefetch">  
                 <a>Vehicle Accessories</a>
               </Link>  
@@ -77,7 +77,7 @@ const Shopbar= () => {
 
            <div className="group">
            <div className="px-4 pb-1 hover:bg-gray-400 rounded-lg">
-              <Link href="/right/shop" as="/right/shop" 
+              <Link href="/shop" as="/shop" 
                rel="stylesheet preload prefetch">
                 <a>Apparel</a>
               </Link>          
@@ -89,7 +89,7 @@ const Shopbar= () => {
 
            <div className="group">
            <div className="px-4 pb-1 hover:bg-gray-400 rounded-lg">
-             <Link href="/right/shop" as="/right/shop" 
+             <Link href="/shop" as="/shop" 
               rel="stylesheet preload prefetch">
                <a>Lifestyle</a>
              </Link>
