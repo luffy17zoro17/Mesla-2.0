@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar/Navbar';
 import SpeedIcon from '@mui/icons-material/Speed';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import BgBlur from '../components/BgBlur';
-import Menu from '../components/RightSlideBar/Menu';
+import Menu from '../components/Menu';
 import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 
 

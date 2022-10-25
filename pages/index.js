@@ -4,11 +4,13 @@ import Image from 'next/image'
 import Navbar from '../components/Navbar/Navbar';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-import Menu from "../components/RightSlideBar/Menu";
-import BgBlur from "../components/BgBlur";
 
-import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 import NavbarTop from "../components/Navbar/NavbarTop";
+import SmallBottomBar from "../components/SmallBottomBar";
+import LRButtons from "../components/LRButtons";
+import NameNdDetails from "../components/NameNdDetails";
+import MenuButton from "../components/MenuButton";
+import MenuContent from "../components/MenuContent";
 
 
 
@@ -145,31 +147,15 @@ export default function Home() {
     
     
     
-    
-   <button onClick={handleToggle} className={`px-4 pb-0.5
-    fixed z-30 right-4 top-[3.3rem] shadow-md shadow-violet-300 text-white
-      font-mono font-bold
-      opacity-[0.9rem] rounded-lg hover:text-cyan-300
-      cursor-pointer 
-      m-3 xl:bg-transparent text-white shadow shadow-red-500
-      xl:shadow-green-300 hover:shadow hover:shadow-violet-600`}>
-        Menu
-    </button>
+     <MenuButton
+        handleToggle={handleToggle}
+     />
+   
     {isShow ?
-  
            (
-               <div>                      
-                <Menu/>
-                <BgBlur/> 
-                  
-                
-                <button onClick={handleToggle} className="fixed z-50 top-7 right-11">
-                   <CancelPresentationIcon 
-                     className="text-white p-[0.2rem]
-                    hover:bg-gray-600 rounded scale-[1.5]"/>
-                </button>
-            
-               </div>
+       <MenuContent
+          handleToggle={handleToggle}
+       />        
     ) : (<div></div>)}
 
     <section className={isShow ? `overflow-y-hidden fixed h-[100%] w-[100%]` 
@@ -192,46 +178,19 @@ export default function Home() {
             
     <FadeInSection className=""> 
         
-    <div className="py-[6.5rem] fixed top-[13%] z-20 w-[100%] text-center">
-                    <div>
-                        <div className={type === "solar" || id===3 ? 
-                        `font-semibold text-4xl z-30 
-                         text-gray-600 tracking-[0.05rem]`
-                        : `font-semibold text-4xl tracking-[0.05rem]
-                         text-white z-30`}>
-                          {name}
-                        </div>                   
-                        <div className={`${type === "solar" || id===3 ? 
-                        `shadow-md shadow-white font-medium text-gray-600` 
-                        : "font-medium text-white shadow-md shadow-green-300"}
-                         ${type === "car" ? `underline cursor-pointer py-2 
-                        ` : "py-2"}`}>
-                          {detail}
-                        </div>  
-                     </div>   
-    </div>
-                                        
+    
+        <NameNdDetails
+           type={type}
+           id={id}
+           name={name}
+           detail={detail}
+        />                                
                         
-    <div className="text-center w-[100%] top-[66%] fixed flex justify-center">
-                          <div className="
-                           w-[22rem] sm:w-[26rem] md:flex md:justify-center 
-                            md:gap-[6vmin] md:w-[75%]">    
-                            <div className="cursor-pointer
-                              opacity-[0.7] text-white bg-gray-700 border 
-                              rounded-3xl py-[0.9rem] text-[13px] shadow-xl shadow-black
-                              font-bold mb-2 hover:opacity-100 md:w-[22rem] md:py-[1rem]">
-                                {buttonL}
-                            </div>             
-                            <div className={id === 7 ? "hidden" : `cursor-pointer shadow-xl
-                             shadow-black
-                              text-[13px] font-bold opacity-[0.8] bg-gray-300 rounded-3xl mb-2
-                              py-[0.9rem] hover:opacity-100
-                              md:w-[22rem] md:py-[1rem]`}>
-                                {buttonR}
-                            </div>                       
-                          </div>
-                          
-    </div>  
+        <LRButtons
+           buttonL={buttonL}
+           buttonR={buttonR}
+           id={id}
+        />
     <div className={id === 1 ? `
           cursor-pointer fixed mt-[3rem] flex w-[100%] top-[80%] justify-center 
            lg:top-[74%]` : "hidden"}>    
@@ -241,22 +200,9 @@ export default function Home() {
           />       
     </div> 
 
-    <div className={id===7 ? `bg-white text-gray-800 fixed w-[100%]
-                   z-20 bottom-0 right-0 
-                   w-[100%] text-center text-[0.75rem] 
-                   flex-wrap font-semibold pb-1 tracking-wide sm:tracking-wider
-                   lg:tracking-widest`: "hidden"}> 
-
-                   <div className="bg-white shadow shadow-black
-                    md:flex justify-center">
-                     Mesla © 2022&nbsp;&nbsp;&nbsp;Privacy & Legal
-                     &nbsp;&nbsp;&nbsp;Vehicle Recalls&nbsp;&nbsp;&nbsp;Contact
-                     &nbsp;&nbsp;&nbsp;Careers&nbsp;&nbsp;&nbsp;News 
-                     <h1 className="hidden sm:flex justify-center">
-                       &nbsp;&nbsp;&nbsp;Engage Locations
-                      </h1>
-                   </div>
-    </div>
+       <SmallBottomBar
+         id={id}
+       />
                 
       
     </FadeInSection> 

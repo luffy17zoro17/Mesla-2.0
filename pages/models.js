@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar/Navbar';
-import SpeedIcon from '@mui/icons-material/Speed';
+
 import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 import BgBlur from '../components/BgBlur';
-import Menu from '../components/RightSlideBar/Menu';
+import Menu from '../components/Menu';
 
 
 const Models = () => {
