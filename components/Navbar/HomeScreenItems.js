@@ -132,7 +132,7 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
            
             <div className={`flex flex-col h-screen
               
-              ${id===1 && "mt-[-10rem] sm:mt-[-8rem]"}`}>
+              ${id===1 && "mb-[-7rem]"}`}>
               <Image
                 src={imgPath}
                 height={3660}
