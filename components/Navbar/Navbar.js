@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
+import MenuButton from '../MenuButton';
 
 
 
@@ -9,10 +10,10 @@ const Navbar= () => {
   
   return (
     
-    <div className='w-[100%] fixed'>
-    <div className="text-white flex border-4 border-orange-300 
+    <div className='w-[100%]'>
+    <div className="text-white flex self-start border-4 border-orange-300 
     shadow-md shadow-yellow-800
-      w-[100%] z-30 h-[3.6rem] top-0 right-0 bg-black rounded-lg">
+      w-[100%] h-[3.6rem] top-0 right-0 bg-black rounded-lg">
 
        <ul className="flex items-center justify-around
         w-[100%] gap-[50%]"> 
@@ -68,11 +69,12 @@ const Navbar= () => {
                 <a>Shop</a>
               </Link>
             </li>
+            
+            
             <li className="px-4 pb-0.5 mr-[7rem] cursor-pointer hover:shadow-xl hover:shadow-black
              hover:bg-green-500 rounded-lg hidden md:flex">
               <Link href="/signin"><a>Account</a></Link>
-            </li>
-                     
+            </li>        
          </ul>   
         
        </ul>

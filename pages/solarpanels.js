@@ -98,7 +98,7 @@ const Solarpanels = () => {
         
          <div>
           <Image
-              src="https://images.unsplash.com/photo-1623005399662-b55f006328c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1864&q=80"
+              src="https://cdn.pixabay.com/photo/2022/01/13/14/45/house-6935453_960_720.jpg"
               layout="fill"
               alt=""
               className="object-cover"
