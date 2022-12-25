@@ -28,7 +28,7 @@
 
 .fade-in-section {
     opacity: 0;
-    visibility:hidden;
+    visibility:invisible;
     transition: opacity 250ms ease-in, visibility 250ms ease-in;
     will-change:opacity,visibility; 
 }
@@ -40,7 +40,7 @@
 }
 
 
-.fade-in-section.is-opaque {
+.fade-in-section.is-visible {
     opacity: 1;
     visibility: visible;
     will-change:'';

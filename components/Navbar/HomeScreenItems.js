@@ -97,7 +97,7 @@ const images = [
     }, []);
     return (
       <div
-        className={`fade-in-section ${isVisible ? "is-hidden": ""}`}
+        className={`fade-in-section ${isVisible ? "is-visible": ""}`}
         ref={domRef}
       >
         {props.children}
@@ -132,7 +132,7 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
            
             <div className={`flex flex-col h-screen
               
-              ${id===1 && "mb-[-7rem]"}`}>
+              ${id===1 && "mb-[-18rem]"}`}>
               <Image
                 src={imgPath}
                 height={3660}
@@ -148,7 +148,7 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
            
            
             
-    <FadeInSection className={`${id===1 && `block`}`}> 
+    <FadeInSection className={id===1 && "block"}> 
         
     
         <NameNdDetails
