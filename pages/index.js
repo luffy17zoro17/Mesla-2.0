@@ -1,16 +1,14 @@
 import React, {useState} from "react";
 import Head from 'next/head'
-import Image from 'next/image'
+
 import Navbar from '../components/Navbar/Navbar';
 
 
 
 import NavbarTop from "../components/Navbar/NavbarTop";
-import SmallBottomBar from "../components/SmallBottomBar";
-import LRButtons from "../components/LRButtons";
-import NameNdDetails from "../components/NameNdDetails";
+
 import MenuButton from "../components/MenuButton";
-import MenuContent from "../components/MenuContent";
+
 import HomeScreenItems from "../components/Navbar/HomeScreenItems";
 
 
