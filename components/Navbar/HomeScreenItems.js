@@ -132,7 +132,7 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
            
             <div className={`flex flex-col h-screen
               
-              ${id===1 && "mt-[-8rem]"}`}>
+              ${id===1 && "mt-[-9rem]"}`}>
               <Image
                 src={imgPath}
                 height={3660}
@@ -164,10 +164,15 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
            id={id}
         />
     <div className={id === 1 ? `
-          cursor-pointer fixed mt-[3rem] flex w-[100%] top-[80%] justify-center 
-           lg:top-[74%]` : "hidden"}>    
+          cursor-pointer fixed mt-[3rem] flex flex-col w-[100%] top-[80%]
+           justify-center items-center
+           lg:top-[74%]` : "hidden"}>  
+          <h2 className="text-white text-sm italic font-bold 
+          text-green-200">
+            Swipe / Scroll</h2>  
           <KeyboardArrowDownIcon
-            className="mt-[5%] text-4xl text-cyan-500 scale-[2] shadow-xl shadow-black
+            className="mt-[5%] text-[4rem] text-red-500 
+            shadow-xl shadow-black animate-bounce
              hover:text-green-200 hover:shadow-red-500"
           />       
     </div>  
