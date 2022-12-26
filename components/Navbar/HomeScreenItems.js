@@ -129,10 +129,10 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type})=>(
     
     <div key={id} className="relative w-full
-       h-full top-[-8rem]">
+       h-full border-4 border-red-400">
            
             <div className={`flex flex-col h-screen
-              ${id===1 && ""}`}>
+              ${id===1 && "my-[-5rem]"}`}>
               <Image
                 src={imgPath}
                 height={3660}
@@ -177,7 +177,7 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
           />       
     </div>  
     <div className={id===7 && `bg-black absolute 
-       w-[100%] z-20 h-[8rem]
+       w-[100%] z-[-10]
       bottom-[5]`}/>
     <div><SmallBottomBar
          id={id}
