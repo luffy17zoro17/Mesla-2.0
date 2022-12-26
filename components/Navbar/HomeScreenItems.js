@@ -129,10 +129,10 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type})=>(
     
     <div key={id} className="relative w-full
-       h-full border-4 border-red-400">
+       border-4 border-black">
            
             <div className={`flex flex-col h-screen
-              ${id===1 && "my-[-5rem]"}`}>
+              ${id===1 && "mt-[-11rem]"}`}>
               <Image
                 src={imgPath}
                 height={3660}
