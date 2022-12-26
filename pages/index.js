@@ -43,18 +43,19 @@ export default function Home() {
     </Head>
    
   
-   <div> 
+   <div className=""> 
      <div><NavbarTop/></div>
      <div className="sticky top-0 left-0 z-20 self-start"><Navbar/>
        <div><MenuButton
         handleToggle={handleToggle}
         /></div> 
      </div>
-     <div className=""><HomeScreenItems
+     <div><HomeScreenItems
        isShow={isShow}
        setIsShow={setIsShow}
        handleToggle={handleToggle}
     /></div> 
+    
    </div> 
    
          

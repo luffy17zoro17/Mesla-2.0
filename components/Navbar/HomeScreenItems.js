@@ -128,11 +128,11 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
         
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type})=>(
     
-    <div key={id} className="snap-center">
+    <div key={id} className="relative w-full
+       h-full top-[-8rem]">
            
             <div className={`flex flex-col h-screen
-              
-              ${id===1 && "mb-[-18rem] md:mb-0 md:my-[-9rem]"}`}>
+              ${id===1 && ""}`}>
               <Image
                 src={imgPath}
                 height={3660}
@@ -176,6 +176,9 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
              hover:text-green-200 hover:shadow-red-500"
           />       
     </div>  
+    <div className={id===7 && `bg-black absolute 
+       w-[100%] z-20 h-[8rem]
+      bottom-[5]`}/>
     <div><SmallBottomBar
          id={id}
        /></div>
@@ -186,7 +189,7 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
     </div> 
           
     ))}
-
+    
     </div>
     </div>
      
