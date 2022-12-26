@@ -128,7 +128,8 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
         
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type})=>(
     
-    <div key={id} className="relative w-full">
+    <div key={id} className="relative w-full border-y-2 
+        border-transparent">
            
             <div className={`flex flex-col h-screen
               ${id===1 && "mt-[-11rem] md:mt-[-10.5rem]"}`}>
@@ -156,12 +157,13 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
            name={name}
            detail={detail}
         />                                
-                        
+                       
         <LRButtons
            buttonL={buttonL}
            buttonR={buttonR}
            id={id}
         />
+        
     <div className={id === 1 ? `
           cursor-pointer fixed mt-[3rem] flex flex-col w-[100%] top-[80%]
            justify-center items-center

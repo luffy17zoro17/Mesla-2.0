@@ -4,7 +4,8 @@ const LRButtons = ({buttonL,buttonR,id}) => {
 
     return (
        <div>
-         <div className="text-center w-[100%] top-[66%] fixed flex justify-center">
+         <div className="text-center w-[100%] 
+                           top-[66%] fixed flex justify-center">
                           <div className="
                            w-[22rem] sm:w-[26rem] md:flex md:justify-center 
                             md:gap-[6vmin] md:w-[75%]">    
@@ -15,7 +16,7 @@ const LRButtons = ({buttonL,buttonR,id}) => {
                                 {buttonL}
                             </div>             
                             <div className={id === 7 ? "hidden" : `cursor-pointer shadow-xl
-                             shadow-black
+                             shadow-black 
                               text-[13px] font-bold opacity-[0.8] bg-gray-300 rounded-3xl mb-2
                               py-[0.9rem] hover:opacity-100
                               md:w-[22rem] md:py-[1rem]`}>
