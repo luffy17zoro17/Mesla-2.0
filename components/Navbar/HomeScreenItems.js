@@ -128,8 +128,7 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
         
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type})=>(
     
-    <div key={id} className="relative w-full
-       border-4 border-black">
+    <div key={id} className="relative w-full">
            
             <div className={`flex flex-col h-screen
               ${id===1 && "mt-[-11rem]"}`}>
