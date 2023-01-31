@@ -45,7 +45,8 @@ export default function Home() {
   
    <div className=""> 
      <div><NavbarTop/></div>
-     <div className="sticky top-0 left-0 z-20 self-start"><Navbar/>
+     <div className="sticky top-0 left-0 z-20 self-start \
+     md:absolute md:w-full lg:sticky"><Navbar/>
        <div><MenuButton
         handleToggle={handleToggle}
         /></div> 
