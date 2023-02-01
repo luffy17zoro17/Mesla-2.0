@@ -125,13 +125,11 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
     <div className={isShow ? `fixed w-[100%]` 
     : ``}>
     
-        
+    <div className="relative h-[100%] z-0 top-0 bottom-0">    
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type})=>(
     
-    <div key={id} className="relative w-full
-          h-screen mt-[-3rem]">
-            <div className={`${id===7 ? `h-[40rem] border-t-2 border-cyan-400` :
-            `border-b-2 border-cyan-400`}`}>
+      <div key={id} className="relative h-screen top-0 bottom-0">
+            <div className={``}>
               <Image
                 src={imgPath}
                 height={1660}
@@ -176,7 +174,8 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
     </div> 
           
     ))}
-    
+    </div>
+
     </div>
     </div>
      
