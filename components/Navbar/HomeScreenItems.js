@@ -130,15 +130,17 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
     
     <div key={id} className="relative w-full
           h-screen mt-[-3rem]">
-            <div className="">
+            <div className={`${id===7 ? `h-[40rem] border-t-2 border-cyan-400` :
+            `border-b-2 border-cyan-400`}`}>
               <Image
                 src={imgPath}
                 height={1660}
                 width={1800}
                 layout={`fill`}
-                className={id===1 ? `bg-black
+                className={`${id===1 ? `bg-black
                 rounded-t-lg object-contain z-[-10] md:object-cover`
                  : `object-contain z-[-10] bg-black md:object-cover`}
+                  `}
                 alt=""
             />
            </div> 
