@@ -129,7 +129,7 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type})=>(
     
     <div key={id} className="relative w-full
-          h-screen">
+          h-screen mt-[-3rem]">
             <div className="">
               <Image
                 src={imgPath}
@@ -137,9 +137,8 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
                 width={1800}
                 layout={`fill`}
                 className={id===1 ? `bg-black
-                rounded-t-lg object-contain z-[-10] md:object-cover
-                 ` : 
-                "object-contain z-[-10] bg-black md:object-cover"}
+                rounded-t-lg object-contain z-[-10] md:object-cover`
+                 : `object-contain z-[-10] bg-black md:object-cover`}
                 alt=""
             />
            </div> 
