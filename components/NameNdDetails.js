@@ -37,8 +37,9 @@ const NameNdDetails = ({type,id,detail,name,buttonL,buttonR})=>{
 
        <div className={id === 1 ? `
           cursor-pointer fixed left-0 z-[-70]
-           flex flex-col w-[100%] bottom-[0rem]
-           justify-center items-center lg:bottom-[3rem]
+           flex flex-col w-[100%] bottom-[1rem]
+           justify-center items-center md:bottom-[0rem]
+            lg:bottom-[3rem]
            ` : "hidden"}>  
           <h2 className="text-white text-sm italic font-bold
           text-green-200">
