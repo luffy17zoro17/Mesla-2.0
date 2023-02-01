@@ -43,14 +43,18 @@ export default function Home() {
     </Head>
    
   
-   <div className=""> 
+  
+     <div className="absolute z-30 w-full">
      <div><NavbarTop/></div>
-     <div className="sticky top-0 left-0 z-20 self-start \
+     <div className="sticky top-0 left-0 z-20 self-start 
      md:absolute md:w-full lg:sticky"><Navbar/>
+
+
        <div><MenuButton
         handleToggle={handleToggle}
         /></div> 
      </div>
+     
      <div><HomeScreenItems
        isShow={isShow}
        setIsShow={setIsShow}

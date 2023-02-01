@@ -1,8 +1,8 @@
 import React from "react";
-import LRButtons from "../LRButtons";
+
 import NameNdDetails from "../NameNdDetails";
 
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
 import SmallBottomBar from "../SmallBottomBar";
 import Image from "next/image";
 import MenuContent from "../MenuContent";
@@ -122,61 +122,46 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
        />        
     ) : (<div></div>)}
 
-    <div className={isShow ? `overflow-y-hidden fixed h-[100%] w-[100%]` 
+    <div className={isShow ? `fixed w-[100%]` 
     : ``}>
     
         
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type})=>(
     
-    <div key={id} className="relative w-full border-y-2 
-        border-transparent">
-           
-            <div className={`flex flex-col h-screen
-              ${id===1 && "mt-[-11rem] md:mt-[-10.5rem]"}`}>
+    <div key={id} className="relative w-full
+          h-screen">
+            <div className="">
               <Image
                 src={imgPath}
-                height={3660}
+                height={1660}
                 width={1800}
-                layout="responsive"
+                layout={`fill`}
                 className={id===1 ? `bg-black
-                rounded-t-lg object-contain z-[-10] md:object-cover` : 
+                rounded-t-lg object-contain z-[-10] md:object-cover
+                 ` : 
                 "object-contain z-[-10] bg-black md:object-cover"}
                 alt=""
             />
+           </div> 
+
             
-            </div>  
-           
-           
-            
-    <FadeInSection className={id===1 && "block"}> 
+    <FadeInSection className={`fixed z-10 flex justify-center
+     flex-col items-center`}> 
         
-    
+       
         <NameNdDetails
            type={type}
            id={id}
            name={name}
            detail={detail}
-        />                                
-                       
-        <LRButtons
            buttonL={buttonL}
            buttonR={buttonR}
-           id={id}
-        />
+        />   
+                                  
+                       
         
-    <div className={id === 1 ? `
-          cursor-pointer fixed mt-[3rem] flex flex-col w-[100%] top-[80%]
-           justify-center items-center
-           lg:top-[74%]` : "hidden"}>  
-          <h2 className="text-white text-sm italic font-bold 
-          text-green-200">
-            Swipe / Scroll</h2>  
-          <KeyboardArrowDownIcon
-            className="mt-[5%] text-[4rem] text-red-500 
-            shadow-xl shadow-black animate-bounce
-             hover:text-green-200 hover:shadow-red-500"
-          />       
-    </div>  
+        
+   
     <div className={id===7 && `bg-black absolute 
        w-[100%] z-[-10]
       bottom-[5]`}/>
