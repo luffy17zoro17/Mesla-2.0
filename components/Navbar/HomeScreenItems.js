@@ -128,7 +128,8 @@ const HomeScreenItems = ({isShow,handleToggle}) => {
     <div className="relative h-[100%] z-0 top-0 bottom-0">    
       {images.map(({id,name,detail,imgPath,buttonL,buttonR,type})=>(
     
-      <div key={id} className="relative h-screen top-0 bottom-0">
+      <div key={id} className="relative h-screen top-0 bottom-0 border-y
+        border-cyan-400">
             <div className={``}>
               <Image
                 src={imgPath}
